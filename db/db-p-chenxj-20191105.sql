@@ -10,19 +10,19 @@ create database t_oauth owner admin;
 GRANT ALL PRIVILEGES ON DATABASE t_oauth to admin;
 
 \c t_twinkle;
-ALTER SCHEMA public OWNER to t_admin;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO t_admin;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO t_admin;
+ALTER SCHEMA public OWNER to admin;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO admin;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO admin;
 create extension "uuid-ossp";
 
 \c t_gateway;
-ALTER SCHEMA public OWNER to t_admin;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO t_admin;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO t_admin;
+ALTER SCHEMA public OWNER to admin;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO admin;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO admin;
 create extension "uuid-ossp";
 
 \c t_oauth;
-ALTER SCHEMA public OWNER to t_admin;
-GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO t_admin;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO t_admin;
+ALTER SCHEMA public OWNER to admin;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO admin;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO admin;
 create extension "uuid-ossp";
