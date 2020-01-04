@@ -4,31 +4,31 @@
 -- ==================================================================
 TRUNCATE TABLE public.s_sysdictionary RESTART IDENTITY CASCADE;
 -- Add GLOBAL.STATUS DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '0', 'INITIAL', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '1', 'ENABLE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '2', 'SUSPENDED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '3', 'CANCELLED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '4', 'DELETED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '5', 'ARCHIVED', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '0', 'INITIAL', '初始化','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '1', 'ENABLE', '已启用','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '2', 'SUSPENDED', '已挂起','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '3', 'CANCELLED', '已撤销','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '4', 'DELETED', '已删除','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'STATUS', '5', 'ARCHIVED', '已归档','1', '0'); 
 
 -- Add GLOBAL.GENDER DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'GENDER', '0', 'MALE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'GENDER', '1', 'FEMALE', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'GENDER', '0', 'FEMALE', '女','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'GENDER', '1', 'MALE', '男','1', '0'); 
 
 -- Add GLOBAL.BIT_FLAG DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'BIT_FLAG', '0', 'FALSE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'BIT_FLAG', '1', 'TRUE', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'BIT_FLAG', '0', 'FALSE', '否','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'BIT_FLAG', '1', 'TRUE', '是','1', '0'); 
 
 -- Add GLOBAL.ENV_TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'ENV_TYPE', '0', 'TEST', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'ENV_TYPE', '1', 'UAT', 'UAT','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'ENV_TYPE', '2', 'PREPRO', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'ENV_TYPE', '3', 'PRO', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'ENV_TYPE', '0', 'TEST', '测试环境','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'ENV_TYPE', '1', 'UAT', 'UAT环境','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'ENV_TYPE', '2', 'PREPRO', '灰度环境','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'ENV_TYPE', '3', 'PRO', '生产环境','1', '0'); 
 
 -- Add GLOBAL.LAUNCH_TYPE DIC.
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'LAUNCH_TYPE', '0', 'LINUX SHELL', 'Linux Shell','1', '0'); 
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'LAUNCH_TYPE', '1', 'WINDOWS BAT', 'Windows Bat','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'LAUNCH_TYPE', '2', 'K8S RC YAML', 'K8s RC Yaml','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'LAUNCH_TYPE', '2', 'K8S RC YAML', 'K8s RC Yaml','1', '0'); 
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'LAUNCH_TYPE', '3', 'K8S SERVICE YAML', 'K8s Service Yaml','1', '0'); 
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'LAUNCH_TYPE', '4', 'DOCKR COMPOSE YAML', 'Docker Compose Yaml','1', '0'); 
 
@@ -85,91 +85,92 @@ INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('GLOBAL', 'PRIMITIVE_TYPE', 'string', 'STRING', 'string','1', '0'); 
 
 -- Add GLOBAL.LAUNCH_TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '0', 'STANDARD SERVICE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '1', 'CUSTOMIZED SERVICE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '2', 'PROJECT', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '3', 'SERVICE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '4', 'ENTRY', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '0', 'STANDARD SERVICE', '标准化服务','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '1', 'CUSTOMIZED SERVICE', '自定义服务','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '2', 'PROJECT', '项目','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '3', 'SERVICE', '服务','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('VERSION', 'OWNER_TYPE', '4', 'ENTRY', '组件','1', '0'); 
 
 -- Add META_DATA_ITEM.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '0', 'TEXT FIELD', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '1', 'COMBOX', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '2', 'DATE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '3', 'TIME', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '4', 'DATE_TIME', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '5', 'DIGITAL FIELD', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '6', 'PASSWORD FIELD', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '7', 'CHECKBOX', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '8', 'RADIOBOX', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '9', 'IMAGE FILE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '10', 'PERCENTAGE FIELD', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '11', 'FRACTION FIELD', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '12', 'TEXT DESCRIPTION', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '13', 'FILE SELECTOR', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '14', 'MULTI TEXT FIELD', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '15', 'MULTI MEDIA TEXT FIELD', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '16', 'MARKDOWN TEXT FIELD', 'Markdown','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type, comments) VALUES ('META_DATA_ITEM', 'TYPE', '17', 'DECIMAL NUMBER', '','1', '0', ''); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '18', 'ATTRIBUTE COMBOX', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type, comments) VALUES ('META_DATA_ITEM', 'TYPE', '19', 'ATTRIBUTE COMBOX AND TEXT FIELD', '','1', '0', ''); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '20', 'REFCOMBOX', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '21', 'REFTREECOMBOX', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '0', 'TEXT FIELD', '文本框','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '1', 'COMBOX', '下拉框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '2', 'MULTI VALUE COMBOX', '多值下拉框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '3', 'DATE', '日期框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '4', 'TIME', '时间狂','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '5', 'DATE_TIME', '日期时间框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '6', 'DIGITAL FIELD', '数字框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '7', 'PASSWORD FIELD', '密码框','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '8', 'CHECKBOX', '复选框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '9', 'RADIOBOX', '单选框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '10', 'IMAGE FILE', '图片框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '11', 'PERCENTAGE FIELD', '百分比框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '12', 'FRACTION FIELD', '分数框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '13', 'TEXT DESCRIPTION', '文本框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '14', 'FILE SELECTOR', '文件选择框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '15', 'MULTI TEXT FIELD', '多行文本框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '16', 'MULTI MEDIA TEXT FIELD', '多行富文本框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '17', 'MARKDOWN TEXT FIELD', 'Markdown文本框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type, comments) VALUES ('META_DATA_ITEM', 'TYPE', '18', 'DECIMAL NUMBER', '小数框','1', '0', '默认保留2位小数'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '19', 'ATTRIBUTE COMBOX', '属性下拉框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type, comments) VALUES ('META_DATA_ITEM', 'TYPE', '20', 'ATTRIBUTE COMBOX AND TEXT FIELD', '属性文本下来复合框','1', '0', '可以输入文本也可以从下拉框选择，如果输入的文本不在下拉框值列表，则将输入的值作为回传值'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '21', 'REFCOMBOX', '引用下拉框','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'TYPE', '22', 'REFTREECOMBOX', '引用下拉树型框','1', '0'); 
 
 -- Add META_DATA_ITEM.VALUE_TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '0', 'NORMAL', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '1', 'DIC', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '2', 'REFERENCE', 'API','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '3', 'REGION', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '4', 'SET', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '0', 'NORMAL', '','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '1', 'DIC', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '2', 'REFERENCE', 'API','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '3', 'REGION', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_ITEM', 'VALUE_TYPE', '4', 'SET', '','1', '0'); 
 
 -- Add META_DATA_TEMPLATE.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '0', 'ENTRY GENERAL', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '1', 'ENTRY ADN', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '2', 'ENTRY CONDITION', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '51', 'UI FRAME', 'UI','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '52', 'UI TABLE', 'UI','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '0', 'ENTRY GENERAL', '普通元数据模板','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '1', 'ENTRY ADN', 'Adnormal元数据模板','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '2', 'ENTRY CONDITION', 'Condition元数据模板','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '51', 'UI FRAME', 'UI表单模板','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'TYPE', '52', 'UI TABLE', 'UI表格模板','1', '0'); 
 
 -- Add META_DATA_TEMPLATE.VALUE_TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'VALUE_TYPE', '0', 'STRING', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'VALUE_TYPE', '1', 'JSON', 'Json','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'VALUE_TYPE', '2', 'ARRAY', 'Object','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'VALUE_TYPE', '0', 'STRING', '字符串','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'VALUE_TYPE', '1', 'JSON', 'Json','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('META_DATA_TEMPLATE', 'VALUE_TYPE', '2', 'ARRAY', 'Object数组','1', '0'); 
 
 -- Add ENTRY_TEMPLATE.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '0', 'CONNECTOR', 'Connector','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '1', 'DATACENTER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '2', 'DATASTORE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '3', 'RULECHAIN', 'RuleChain','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '4', 'RULE', 'Rule','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '0', 'CONNECTOR', 'Connector组件模板','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '1', 'DATACENTER', '数据中心组件模板','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '2', 'DATASTORE', '数据存储中心组件模板','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '3', 'RULECHAIN', 'RuleChain组件模板','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE', 'TYPE', '4', 'RULE', 'Rule组件模板','1', '0'); 
 
 -- Add GLOBAL.VALUE_TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE_MAP', 'VALUE_TYPE', '0', 'SINGLE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE_MAP', 'VALUE_TYPE', '1', 'ARRAY', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE_MAP', 'VALUE_TYPE', '0', 'SINGLE', '单值','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY_TEMPLATE_MAP', 'VALUE_TYPE', '1', 'ARRAY', '多值','1', '0'); 
 
 -- Add CONFIGUE_TEMPLATE.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '0', 'LEVEL1 GROUP', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '1', 'ENTITY GROUP', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '2', 'PARA GROUP', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '3', 'PARA TYPE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '51', 'OTHER', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '0', 'LEVEL1 GROUP', '根类型','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '1', 'ENTITY GROUP', '实体类型','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '2', 'PARA GROUP', '属性类型','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '3', 'PARA TYPE', '子属性类型','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'TYPE', '51', 'OTHER', '其它','1', '0'); 
 
 -- Add CONFIGUE_TEMPLATE.CATEGORY DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'CATEGORY', '0', 'BASE SETTINGS', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'CATEGORY', '1', 'ADVANCED SETTINGS', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'CATEGORY', '0', 'BASE SETTINGS', '基本配置','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('CONFIGUE_TEMPLATE', 'CATEGORY', '1', 'ADVANCED SETTINGS', '高级配置','1', '0'); 
 
 -- Add PROJECT.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'TYPE', '0', 'GENERAL PROJECT', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type, comments) VALUES ('PROJECT', 'TYPE', '1', 'VIRTRUAL PROJECT', '','1', '0', 'Twinkle'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'TYPE', '0', 'GENERAL PROJECT', '普通项目','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type, comments) VALUES ('PROJECT', 'TYPE', '1', 'VIRTRUAL PROJECT', '虚拟项目','1', '0', '非Twinkle体系内的项目'); 
 
 -- Add PROJECT.STATUS DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '0', 'INITIAL', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '1', 'CONFIGURED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '2', 'DEVELOPING', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '3', 'PUBLISHED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '4', 'ITERATIVE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '5', 'COMPLETED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '6', 'PATCHING', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '7', 'ARCHIVED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '8', 'DELETED', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '0', 'INITIAL', '初始化','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '1', 'CONFIGURED', '设置中','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '2', 'DEVELOPING', '研发中','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '3', 'PUBLISHED', '已发布','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '4', 'ITERATIVE', '迭代中','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '5', 'COMPLETED', '已完成','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '6', 'PATCHING', '补丁中','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '7', 'ARCHIVED', '已归档','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT', 'STATUS', '8', 'DELETED', '已删除','1', '0'); 
 
 -- Add PROJECT.PROJECT_SETTINGS.
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'FRAMEWORK_TYPE', '0', 'SPRING CLOUD', 'Spring Cloud','1', '0');
@@ -190,52 +191,52 @@ INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'GATEWAY_TYPE', '0', 'SPRING CLOUD GATEWAY', 'Spring Cloud Gateway','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'GATEWAY_TYPE', '1', 'SPRING CLOUD ZUUL', 'Spring Cloud Zuul1','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'GATEWAY_TYPE', '2', 'SPRING CLOUD ZUUL2', 'Spring Cloud Zuul2','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'GATEWAY_TYPE', '51', 'CUSTOMIZE', '','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'GATEWAY_TYPE', '51', 'CUSTOMIZE', '自定义','1', '0');
 
 -- Add PROJECT.AUTH_TYPE.
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'AUTH_TYPE', '0', 'TWINKLE AUTH CENTER', 'Twinkle Auth Center','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'AUTH_TYPE', '51', 'CUSTOMIZE', '','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_SETTINGS', 'AUTH_TYPE', '51', 'CUSTOMIZE', '自定义','1', '0');
 
 -- Add PROJECT_ENV.TYPE.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_ENV', 'TYPE', '0', 'HOST', 'Host','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_ENV', 'TYPE', '1', 'KUBERNETES', 'Kubernetes','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_ENV', 'TYPE', '0', 'HOST', '主机环境','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_ENV', 'TYPE', '1', 'KUBERNETES', 'Kubernetes环境','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_ENV', 'TYPE', '2', 'DATACENTER', 'DataSource','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_ENV', 'TYPE', '3', 'DATASTORE', 'DataStore','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_ENV', 'TYPE', '4', 'DATACACHE', 'Cache','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_ENV', 'TYPE', '5', 'MQ', 'MQ','1', '0');
 
 -- Add PROJECT_TRACE.TYPE.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '0', 'INITIALIZE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '1', 'CONFIGURE PROJECT', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '2', 'ADD SERVICE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '3', 'DELETE SERVICE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '4', 'PUBLISH PROJECT', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '5', 'CHANGE ARCHITECTURE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '6', 'CHANGE OWNER', '','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '0', 'INITIALIZE', '项目初始化','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '1', 'CONFIGURE PROJECT', '项目配置','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '2', 'ADD SERVICE', '添加服务','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '3', 'DELETE SERVICE', '删除服务','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '4', 'PUBLISH PROJECT', '发布服务','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '5', 'CHANGE ARCHITECTURE', '变更架构','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('PROJECT_TRACE', 'TYPE', '6', 'CHANGE OWNER', '变换责任人','1', '0');
 
 -- Add SERVICE.CATEGORY.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '0', 'BUSINESS SERVICE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '1', 'DISCOVERY SERVICE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '2', 'CONFIG SERVICE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '3', 'GATEWAY SERVICE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '4', 'OAUTH SERVICE', '','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '0', 'BUSINESS SERVICE', '业务服务','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '1', 'DISCOVERY SERVICE', '服务治理中心','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '2', 'CONFIG SERVICE', '配置中心','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '3', 'GATEWAY SERVICE', '网关','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'CATEGORY', '4', 'OAUTH SERVICE', '鉴权中心','1', '0');
 
 -- Add SERVICE.TYPE.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'TYPE', '0', 'NEW SERVICE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'TYPE', '1', 'CUSTOMIZED SERVICE', 'Service','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'TYPE', '2', 'NO-PROJECT SERVICE', 'Service','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'TYPE', '3', 'THIRD-PART SERVICE', 'Service','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'TYPE', '0', 'NEW SERVICE', '业务服务','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'TYPE', '1', 'CUSTOMIZED SERVICE', '自定义Service','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'TYPE', '2', 'NO-PROJECT SERVICE', '非项目Service','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'TYPE', '3', 'THIRD-PART SERVICE', '第三方Service','1', '0');
 
 -- Add SERVICE.STATUS DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '0', 'INITIAL', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '1', 'CONFIGURED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '2', 'DEVELOPING', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '3', 'PUBLISHED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '4', 'ITERATIVE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '5', 'COMPLETED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '6', 'PATCHING', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '7', 'ARCHIVED', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '8', 'DELETED', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '0', 'INITIAL', '初始化','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '1', 'CONFIGURED', '已配置','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '2', 'DEVELOPING', '研发中','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '3', 'PUBLISHED', '已发布','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '4', 'ITERATIVE', '迭代中','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '5', 'COMPLETED', '已完成','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '6', 'PATCHING', '修复中','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '7', 'ARCHIVED', '已归档','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE', 'STATUS', '8', 'DELETED', '已删除','1', '0'); 
 
 -- Add SERVICE_RELY.TYPE.
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_RELY', 'TYPE', '0', 'RESTFUL HTTP', 'Restful Http','1', '0');
@@ -245,45 +246,45 @@ INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_RELY', 'TYPE', '4', 'MQ', 'MQ','1', '0');
 
 -- Add SERVICE_ENV.TYPE.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ENV', 'TYPE', '0', 'HOST', 'Host','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ENV', 'TYPE', '1', 'KUBERNETES', 'Kubernetes','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ENV', 'TYPE', '0', 'HOST', 'Host环境','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ENV', 'TYPE', '1', 'KUBERNETES', 'Kubernetes环境','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ENV', 'TYPE', '2', 'DATACENTER', 'DataSource','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ENV', 'TYPE', '3', 'DATASTORE', 'DataStore','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ENV', 'TYPE', '4', 'DATACACHE', 'Cache','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ENV', 'TYPE', '5', 'MQ', 'MQ','1', '0');
 
 -- Add SERVICE_ATTRIBUTE.TYPE.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ATTRIBUTE', 'TYPE', '0', 'PRIMITIVE PARAMETER', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ATTRIBUTE', 'TYPE', '1', 'STRUCT PARAMETER', '','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ATTRIBUTE', 'TYPE', '0', 'PRIMITIVE PARAMETER', '基础参数','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_ATTRIBUTE', 'TYPE', '1', 'STRUCT PARAMETER', '结构参数','1', '0');
 
 -- Add SERVICE_TRACE.TYPE.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '0', 'INITIALIZE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '1', 'CONFIGURE SERVICE', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '2', 'DEVELOPING', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '3', 'PUBLISHED', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '4', 'ITERATORING', '','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '5', 'CHANGE OWNER', '','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '0', 'INITIALIZE', '服务初始化','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '1', 'CONFIGURE SERVICE', '配置服务','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '2', 'DEVELOPING', '服务研发','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '3', 'PUBLISHED', '服务发布','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '4', 'ITERATORING', '服务迭代','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SERVICE_TRACE', 'TYPE', '5', 'CHANGE OWNER', '变更责任人','1', '0');
 
 -- Add ENTRY.TYPE.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '0', 'CONNECTOR MANAGER', 'Connector','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '0', 'CONNECTOR MANAGER', 'Connector','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '1', 'CONNECTOR', 'Connector','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '2', 'ENDPOINT', 'EndPoint','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '3', 'RULECHAIN MANAGER', 'RuleChain','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '3', 'RULECHAIN MANAGER', 'RuleChain','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '4', 'RULE', 'Rule','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '5', 'RULECHAIN', 'RuleChain','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '6', 'DATACENTER MANAGER', 'DataCenter','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '6', 'DATACENTER MANAGER', 'DataCenter','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '7', 'STATEMENT', 'Statement','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '8', 'EXECUTOR', 'Statement Executor','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '9', 'DATACENTER MANAGER', 'DataCenter','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '10', 'ATTRIBUTE MANAGER', 'Attribute','1', '0');
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '11', 'STRUCT ATTRIBUTE MANAGER', 'Struct Attribute','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '9', 'DATACENTER MANAGER', 'DataCenter','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '10', 'ATTRIBUTE MANAGER', 'Attribute','1', '0');
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '11', 'STRUCT ATTRIBUTE MANAGER', 'Struct Attribute','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '12', 'STRUCT ATTRIBUTE NAMESPACE', 'Struct Attribute Namespace','1', '0');
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ENTRY', 'TYPE', '13', 'STRUCT ATTRIBUTE TYPE', 'Struct Attribute Type','1', '0');
 
 -- Add DATA_CACHE.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('DATA_CACHE', 'TYPE', '0', 'REDIS MASTER-SLAVE', 'Redis','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('DATA_CACHE', 'TYPE', '1', 'REDIS SENTINEL', 'Redis','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('DATA_CACHE', 'TYPE', '2', 'REDIS CLUSTER', 'Redis Cluster','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('DATA_CACHE', 'TYPE', '0', 'REDIS MASTER-SLAVE', 'Redis','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('DATA_CACHE', 'TYPE', '1', 'REDIS SENTINEL', 'Redis','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('DATA_CACHE', 'TYPE', '2', 'REDIS CLUSTER', 'Redis Cluster','1', '0'); 
 
 -- Add MESSAGE_QUEUE.TYPE DIC.
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MESSAGE_QUEUE', 'TYPE', '0', 'RABBIT MQ', 'RabbitMQ','1', '0'); 
@@ -292,28 +293,28 @@ INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MESSAGE_QUEUE', 'TYPE', '3', 'KAFKA', 'Kafka','1', '0'); 
 
 -- Add USER.TITLE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '0', 'ADMINISTRATOR', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '1', 'SYSTEM MANAGER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '2', 'PROJECT MANAGER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '3', 'ARCHITECT', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '4', 'SENIOR DEVELOPER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '5', 'INTERMEDIATE DEVELOPER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '6', 'JUNIOR DEVELOPER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '7', 'TESTR', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '8', 'INFRASTRUCTURE ARCHITECT', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '9', 'OPERATER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '10', 'LEEDER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '99', 'OTHER', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '0', 'ADMINISTRATOR', '超级管理员','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '1', 'SYSTEM MANAGER', '系统管理员','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '2', 'PROJECT MANAGER', '项目经理','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '3', 'ARCHITECT', '架构师','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '4', 'SENIOR DEVELOPER', '高级研发','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '5', 'INTERMEDIATE DEVELOPER', '中级研发','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '6', 'JUNIOR DEVELOPER', '初级研发','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '7', 'TESTER', '测试','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '8', 'INFRASTRUCTURE ARCHITECT', '运维架构师','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '9', 'OPERATER', '运维人员','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '10', 'LEEDER', '领导','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('USER', 'TITLE', '99', 'OTHER', '其它','1', '0'); 
 
 -- Add TENANT.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('TENANT', 'TYPE', '0', 'SYSTEM PROVIDER', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('TENANT', 'TYPE', '1', 'SYSTEM USER', '','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('TENANT', 'TYPE', '0', 'SYSTEM PROVIDER', '系统提供者','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('TENANT', 'TYPE', '1', 'SYSTEM USER', '系统使用者','1', '0'); 
 
 -- Add MENU.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MENU', 'TYPE', '0', 'SYSTEM RESERVED MENU', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MENU', 'TYPE', '1', 'CONSOLE MENU', '','1', '0');  
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MENU', 'TYPE', '2', 'UI MENU', 'Portal','1', '0');  
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MENU', 'TYPE', '3', 'MULTI-PURPOSE MENU', 'UI','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MENU', 'TYPE', '0', 'SYSTEM RESERVED MENU', '系统预用菜单','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MENU', 'TYPE', '1', 'CONSOLE MENU', '控制台彩带','1', '0');  
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MENU', 'TYPE', '2', 'UI MENU', 'Portal菜单','1', '0');  
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('MENU', 'TYPE', '3', 'MULTI-PURPOSE MENU', 'UI控制台共用菜单','1', '0'); 
 
 -- Add RESULT_CODE.CATEGORY DIC.
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('RESULT_CODE', 'CATEGORY', '0', 'HTTP SERVER CONNECTOR', 'Http Server Connector','1', '0'); 
@@ -328,16 +329,16 @@ INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type
 INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('RESULT_CODE', 'CATEGORY', '9', 'DATA STORE', 'Data Store','1', '0');  
 
 -- Add RESULT_CODE.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('RESULT_CODE', 'TYPE', '0', 'SYSTEM RESERVED RESULT CODE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('RESULT_CODE', 'TYPE', '1', 'CUSTOMIZED RESULT CODE', '','1', '0');  
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('RESULT_CODE', 'TYPE', '0', 'SYSTEM RESERVED RESULT CODE', '系统结果码','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('RESULT_CODE', 'TYPE', '1', 'CUSTOMIZED RESULT CODE', '自定义结果码','1', '0');  
 
 -- Add SYSDICTIONARY.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SYSDICTIONARY', 'TYPE', '0', 'SYSTEM RESERVED RESULT CODE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SYSDICTIONARY', 'TYPE', '1', 'CUSTOMIZED RESULT CODE', '','1', '0');  
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SYSDICTIONARY', 'TYPE', '0', 'SYSTEM RESERVED DIC', '系统字典','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('SYSDICTIONARY', 'TYPE', '1', 'CUSTOMIZED DIC', '自定义字典','1', '0');  
 
 -- Add ROLE.TYPE DIC.
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ROLE', 'TYPE', '0', 'SYSTEM RESERVED ROLE', '','1', '0'); 
-INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ROLE', 'TYPE', '1', 'CUSTOMIZED ROLE', '','1', '0');  
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ROLE', 'TYPE', '0', 'SYSTEM RESERVED ROLE', '系统角色','1', '0'); 
+INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type) VALUES ('ROLE', 'TYPE', '1', 'CUSTOMIZED ROLE', '自定义角色','1', '0');  
 
 -- ==================================================================
 -- *        Going to initialize the ATTRIBUTE TYPE Records.         *
@@ -396,62 +397,63 @@ INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE
 -- Add System Menu.  uuid_generate_v4()
 TRUNCATE TABLE public.S_MENU RESTART IDENTITY CASCADE;
 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('9420d480-d3e8-4c47-8cb2-a0e619c68bbc', 'DASHBOARD', '', null, '1', '/twinkle/console/dashboard', 'icon-dashboard', '1', '3');
--- 
--- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('7f5d90ae-ccba-4a40-87af-48347b3991a1', 'MY_PROJECT', '', null, '10', '', 'icon-project', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('481535c1-1e7e-4913-a32a-48d45fd741eb', 'PROJECT_LIST', '', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '11', '/twinkle/console/project/projectlist', 'icon-projectlist', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3887c84c-9e92-4050-a718-5725cdd2a882', 'PROJECT_ENV', '', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '12', '/twinkle/console/project/env', 'icon-projectenv', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('bff16749-df4b-44fe-9452-6f3952371cb7', 'PROJECT_SERVICE', '', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '13', '/twinkle/console/project/architecture', 'icon-projectarch', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('9420d480-d3e8-4c47-8cb2-a0e619c68bbc', 'DASHBOARD', '首页', null, '1', '/twinkle/console/dashboard', 'icon-dashboard', '1', '3');
+-- 
+-- 
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('7f5d90ae-ccba-4a40-87af-48347b3991a1', 'MY_PROJECT', '我的项目', null, '10', '', 'icon-project', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('481535c1-1e7e-4913-a32a-48d45fd741eb', 'PROJECT_LIST', '项目列表', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '11', '/twinkle/console/project/projectlist', 'icon-projectlist', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3887c84c-9e92-4050-a718-5725cdd2a882', 'PROJECT_ENV', '项目环境', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '12', '/twinkle/console/project/env', 'icon-projectenv', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('bff16749-df4b-44fe-9452-6f3952371cb7', 'PROJECT_SERVICE', '项目服务列表', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '13', '/twinkle/console/project/architecture', 'icon-projectarch', '1', '3');
 
--- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('52d5de5b-11f1-40ae-bbe3-82fb720b9c99', 'MY_SERVICE', '', null, '30', '', 'icon-service', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('b04c87ca-d654-40ce-8491-942f5f10d82e', 'SERVICE_LIST', '', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '31', '/twinkle/console/service/servicelist', 'icon-servicelist', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('62748fd1-3d90-4914-9a69-87d9ddd2ce08', 'SERVICE_ENV', '', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '32', '/twinkle/console/service/env', 'icon-serviceenv', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('fcd6af44-935b-450a-a3e6-11774932a10b', 'SERVICE_SETTING', '', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '33', '/twinkle/console/service/settings', 'icon-servicesetting', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a41fd9e2-d3d6-4f83-89cf-6da508f29464', 'SERVICE_BUILD', '', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '34', '/twinkle/console/service/build', 'icon-servicebuild', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('8821f9b2-8f3e-4054-83f4-8cb2918233a4', 'SERVICE_TEST', '', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '35', '/twinkle/console/service/test', 'icon-servicetest', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('43348007-ed9f-4934-98fe-490ee75f2947', 'SERVICE_PUBLISH', '', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '36', '/twinkle/console/service/publish', 'icon-servicepublish', '1', '3');
+-- 
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('52d5de5b-11f1-40ae-bbe3-82fb720b9c99', 'MY_SERVICE', '我的服务', null, '30', '', 'icon-service', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('b04c87ca-d654-40ce-8491-942f5f10d82e', 'SERVICE_LIST', '服务列表', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '31', '/twinkle/console/service/servicelist', 'icon-servicelist', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('62748fd1-3d90-4914-9a69-87d9ddd2ce08', 'SERVICE_ENV', '服务环境', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '32', '/twinkle/console/service/env', 'icon-serviceenv', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('fcd6af44-935b-450a-a3e6-11774932a10b', 'SERVICE_SETTING', '服务设置', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '33', '/twinkle/console/service/settings', 'icon-servicesetting', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a41fd9e2-d3d6-4f83-89cf-6da508f29464', 'SERVICE_BUILD', '服务构建', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '34', '/twinkle/console/service/build', 'icon-servicebuild', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('8821f9b2-8f3e-4054-83f4-8cb2918233a4', 'SERVICE_TEST', '服务测试', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '35', '/twinkle/console/service/test', 'icon-servicetest', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('43348007-ed9f-4934-98fe-490ee75f2947', 'SERVICE_PUBLISH', '服务发布', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '36', '/twinkle/console/service/publish', 'icon-servicepublish', '1', '3');
 
--- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('4720566a-d7c1-44b6-9858-186d0764e5b3', 'MY_ENV', '', null, '50', '', 'icon-env', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('1bfef86a-b35b-409d-8dda-dbbe70dd73e9', 'ENV_HOST', '', '4720566a-d7c1-44b6-9858-186d0764e5b3', '51', '/twinkle/console/env/hostlist', 'icon-envhost', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('c2783e3a-f3bd-4330-bdab-eb809eec7d6d', 'ENV_KUBERNETES', 'Kubernetes', '4720566a-d7c1-44b6-9858-186d0764e5b3', '52', '/twinkle/console/env/kubernetes', 'icon-envk8s', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3b7e766d-d1d7-4d2e-ba5a-2d4a144a16f5', 'ENV_DATASOURCE', '', '4720566a-d7c1-44b6-9858-186d0764e5b3', '53', '/twinkle/console/env/datasource', 'icon-envdatasource', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('02f3c50f-ef07-470e-b2fa-ce8abac6f404', 'ENV_CACHE', '', '4720566a-d7c1-44b6-9858-186d0764e5b3', '54', '/twinkle/console/env/cache', 'icon-envcache', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('4ae7af00-9696-4972-95d5-056241659dcb', 'ENV_MQ', 'MQ', '4720566a-d7c1-44b6-9858-186d0764e5b3', '55', '/twinkle/console/env/mq', 'icon-envmq', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('9d9ebb71-8e77-468d-a6c0-1627639a8156', 'ENV_GIT', 'Git', '4720566a-d7c1-44b6-9858-186d0764e5b3', '56', '/twinkle/console/env/git', 'icon-envgit', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('03b7d04c-66c8-4686-a113-144aaa43a642', 'ENV_MAVEN', 'Maven', '4720566a-d7c1-44b6-9858-186d0764e5b3', '57', '/twinkle/console/env/maven', 'icon-envmaven', '1', '1');
+-- 
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('4720566a-d7c1-44b6-9858-186d0764e5b3', 'MY_ENV', '我的环境', null, '50', '', 'icon-env', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('1bfef86a-b35b-409d-8dda-dbbe70dd73e9', 'ENV_HOST', '主机环境', '4720566a-d7c1-44b6-9858-186d0764e5b3', '51', '/twinkle/console/env/hostlist', 'icon-envhost', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('c2783e3a-f3bd-4330-bdab-eb809eec7d6d', 'ENV_KUBERNETES', 'Kubernetes环境', '4720566a-d7c1-44b6-9858-186d0764e5b3', '52', '/twinkle/console/env/kubernetes', 'icon-envk8s', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3b7e766d-d1d7-4d2e-ba5a-2d4a144a16f5', 'ENV_DATASOURCE', '数据源中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '53', '/twinkle/console/env/datasource', 'icon-envdatasource', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('02f3c50f-ef07-470e-b2fa-ce8abac6f404', 'ENV_CACHE', '缓存中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '54', '/twinkle/console/env/cache', 'icon-envcache', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('4ae7af00-9696-4972-95d5-056241659dcb', 'ENV_MQ', 'MQ中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '55', '/twinkle/console/env/mq', 'icon-envmq', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('9d9ebb71-8e77-468d-a6c0-1627639a8156', 'ENV_GIT', 'Git中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '56', '/twinkle/console/env/git', 'icon-envgit', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('03b7d04c-66c8-4686-a113-144aaa43a642', 'ENV_MAVEN', 'Maven中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '57', '/twinkle/console/env/maven', 'icon-envmaven', '1', '1');
 
--- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3cda0396-eaf8-437c-932b-e90ae2d2f168', 'MY_ATTRIBUTE', '', null, '90', '', 'icon-attr', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('58373234-1fe6-49bc-8632-8e63e2c34a64', 'ATTR_PRIMITIVE', '', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '91', '/twinkle/console/attr/primitive', 'icon-attrprimitive', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('d81116bd-2f20-42b0-b67b-78f853a333ed', 'ATTR_STRUCT', '', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '92', '/twinkle/console/attr/struct', 'icon-attrstruct', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('f8810b18-1bcf-479d-b7f5-c39961e66866', 'ATTR_PRIMITIVE_TYPE', '', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '93', '/twinkle/console/attr/primitivetype', 'icon-attrprimitivetype', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3f4b286f-582e-4814-93f0-82ebf5e7c52a', 'ATTR_PRIMITIVE_TYPE_MGMT', '', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '94', '/twinkle/console/attr/primitivetypemgmt', 'icon-attrprimitivetypemgmt', '1', '0');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('401c18ce-955f-42f8-999f-e070dbff50de', 'ATTR_ATTR_TYPE_SQL_TYPE', 'SQL', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '95', '/twinkle/console/attr/primitivesql', 'icon-primitivesql', '1', '0');
+-- 
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3cda0396-eaf8-437c-932b-e90ae2d2f168', 'MY_ATTRIBUTE', '我的参数', null, '90', '', 'icon-attr', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('58373234-1fe6-49bc-8632-8e63e2c34a64', 'ATTR_PRIMITIVE', '基础参数', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '91', '/twinkle/console/attr/primitive', 'icon-attrprimitive', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('d81116bd-2f20-42b0-b67b-78f853a333ed', 'ATTR_STRUCT', '结构参数', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '92', '/twinkle/console/attr/struct', 'icon-attrstruct', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('f8810b18-1bcf-479d-b7f5-c39961e66866', 'ATTR_PRIMITIVE_TYPE', '基础参数类型', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '93', '/twinkle/console/attr/primitivetype', 'icon-attrprimitivetype', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3f4b286f-582e-4814-93f0-82ebf5e7c52a', 'ATTR_PRIMITIVE_TYPE_MGMT', '基础参数类型管理', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '94', '/twinkle/console/attr/primitivetypemgmt', 'icon-attrprimitivetypemgmt', '1', '0');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('401c18ce-955f-42f8-999f-e070dbff50de', 'ATTR_ATTR_TYPE_SQL_TYPE', 'SQL类型', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '95', '/twinkle/console/attr/primitivesql', 'icon-primitivesql', '1', '0');
 
--- 
--- Maven
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('09b40dd6-1988-4267-bcb7-142782b55bb1', 'MY_COMPONENT', '', null, '110', '', 'icon-composite', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('2b8cc166-c117-44ba-86be-a7835f0395a8', 'COM_COMPONENT_LIST', '', '09b40dd6-1988-4267-bcb7-142782b55bb1', '111', '/twinkle/console/component/componentlist', 'icon-componentlist', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('6a8bb931-7aea-4b0e-99f1-86e52871d372', 'COM_MANAGEMENT', '', '09b40dd6-1988-4267-bcb7-142782b55bb1', '112', '/twinkle/console/component/componentlist', 'icon-componentmgmt', '1', '0');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('190ae300-5b78-4469-9c80-47061278d2ce', 'COM_CUSTOMIZE', '', '09b40dd6-1988-4267-bcb7-142782b55bb1', '113', '/twinkle/console/component/customize', 'icon-comcustomize', '1', '3');
+-- 
+-- Maven
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('09b40dd6-1988-4267-bcb7-142782b55bb1', 'MY_COMPONENT', '我的组件', null, '110', '', 'icon-composite', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('2b8cc166-c117-44ba-86be-a7835f0395a8', 'COM_COMPONENT_LIST', '组件列表', '09b40dd6-1988-4267-bcb7-142782b55bb1', '111', '/twinkle/console/component/componentlist', 'icon-componentlist', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('6a8bb931-7aea-4b0e-99f1-86e52871d372', 'COM_MANAGEMENT', '组件管理', '09b40dd6-1988-4267-bcb7-142782b55bb1', '112', '/twinkle/console/component/componentlist', 'icon-componentmgmt', '1', '0');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('190ae300-5b78-4469-9c80-47061278d2ce', 'COM_CUSTOMIZE', '自定义组件', '09b40dd6-1988-4267-bcb7-142782b55bb1', '113', '/twinkle/console/component/customize', 'icon-comcustomize', '1', '3');
 
--- UI
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('72f51e07-2e09-4617-bed2-09dcba6898e8', 'MY_METADATA', '', null, '130', '', 'icon-metadata', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('97affd10-d4f4-4854-8049-22911d267b1c', 'MD_LIST', '', '72f51e07-2e09-4617-bed2-09dcba6898e8', '131', '/twinkle/console/metadata/list', 'icon-mdlist', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('42fbbee0-4c6b-4cab-bc17-c75bb344f167', 'MD_MANAGEMENT', '', '72f51e07-2e09-4617-bed2-09dcba6898e8', '132', '/twinkle/console/metadata/management', 'icon-mdmanagement', '0', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('e96d2552-f73d-4963-9242-bedea10c9662', 'MG_TEMPLATE', '', '72f51e07-2e09-4617-bed2-09dcba6898e8', '133', '/twinkle/console/metadata/template', 'icon-mdtemplate', '1', '1');
+-- UI
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('72f51e07-2e09-4617-bed2-09dcba6898e8', 'MY_METADATA', '元数据中心', null, '130', '', 'icon-metadata', '1', '1');
+--INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('97affd10-d4f4-4854-8049-22911d267b1c', 'MD_LIST', '元数据列表', '72f51e07-2e09-4617-bed2-09dcba6898e8', '131', '/twinkle/console/metadata/list', 'icon-mdlist', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('42fbbee0-4c6b-4cab-bc17-c75bb344f167', 'MD_MANAGEMENT', '元数据管理', '72f51e07-2e09-4617-bed2-09dcba6898e8', '132', '/twinkle/console/metadata/management', 'icon-mdmanagement', '0', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('e96d2552-f73d-4963-9242-bedea10c9662', 'MG_TEMPLATE', '元数据模板', '72f51e07-2e09-4617-bed2-09dcba6898e8', '133', '/twinkle/console/metadata/template', 'icon-mdtemplate', '1', '1');
 
--- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', 'MY_SYSTEMMANAGEMET', '', null, '150', '', 'icon-systemmgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('e380dd07-b2c0-4ac1-9ecf-7ebba60c2d02', 'SM_USER_MANAGEMENT', '', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '151', '/twinkle/console/systemmgmt/usermgmt', 'icon-smusermgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a360e4b3-ba3e-48b0-9d33-04f559efa240', 'SM_DEPT_MANAGEMENT', '', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '152', '/twinkle/console/systemmgmt/deptmgmt', 'icon-smdeptmgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('d76418e4-81f1-4216-94de-7f379fcdaa9c', 'SM_ROLE_MANAGEMENT', '', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '153', '/twinkle/console/systemmgmt/rolemgmt', 'icon-smrolemgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('7b3a2f94-ad67-4b96-a4cd-2ae9f2e042b3', 'SM_PRIVILEGES', '', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '154', '/twinkle/console/systemmgmt/privilegemgmt', 'icon-smprivilegemgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('b4a8959f-4b66-403b-94f6-decc105bd285', 'SM_DICTIONARY', '', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '155', '/twinkle/console/systemmgmt/dictionarymgmt', 'icon-smdictionarymgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a9113c19-1d61-4f7b-8e56-df5f6eb47024', 'SM_RESULTCODE', '', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '156', '/twinkle/console/systemmgmt/resultcodemgmt', 'icon-smresultcodemgmt', '1', '3');
+-- 
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', 'MY_SYSTEMMANAGEMET', '系统管理', null, '150', '', 'icon-systemmgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('e380dd07-b2c0-4ac1-9ecf-7ebba60c2d02', 'SM_USER_MANAGEMENT', '用户管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '151', '/twinkle/console/systemmgmt/usermgmt', 'icon-smusermgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a360e4b3-ba3e-48b0-9d33-04f559efa240', 'SM_DEPT_MANAGEMENT', '部门管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '152', '/twinkle/console/systemmgmt/deptmgmt', 'icon-smdeptmgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('d76418e4-81f1-4216-94de-7f379fcdaa9c', 'SM_ROLE_MANAGEMENT', '角色管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '153', '/twinkle/console/systemmgmt/rolemgmt', 'icon-smrolemgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('7b3a2f94-ad67-4b96-a4cd-2ae9f2e042b3', 'SM_MENU_MANAGEMENT', '菜单管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '154', '/twinkle/console/systemmgmt/privilegemgmt', 'icon-smprivilegemgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('b4a8959f-4b66-403b-94f6-decc105bd285', 'SM_DICTIONARY', '数据字典', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '155', '/twinkle/console/systemmgmt/dictionarymgmt', 'icon-smdictionarymgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a9113c19-1d61-4f7b-8e56-df5f6eb47024', 'SM_RESULTCODE', '结果码', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '156', '/twinkle/console/systemmgmt/resultcodemgmt', 'icon-smresultcodemgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('facf6d15-fcbf-4ba5-a890-6f0ada217309', 'SM_TENANT_MANAGEMENT', '租户管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '157', '/twinkle/console/systemmgmt/tenantmgmt', 'icon-tenantemgmt', '1', '1');
 
 -- ==================================================================
 -- *        Going to initialize the User Related Records.           *
@@ -463,10 +465,18 @@ INSERT INTO PUBLIC.U_TENANT(ID, CODE, NAME, LOGO, TYPE, STATUS) VALUES ('77844ca
 
 -- Add Initial System Administor Role.  uuid_generate_v4()
 TRUNCATE TABLE public.U_ROLE RESTART IDENTITY CASCADE;
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('bf6a4882-aa7f-4181-837e-acda967aae69', 'R_ROOT', '', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('bf6a4882-aa7f-4181-837e-acda967aae69', 'R_ROOT', '超级管理员', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('6be21a76-2a7f-45ac-886d-cd14e3a6e577', 'R_ADMINISTRATOR', '系统管理员', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('3b0b8bef-17a2-410d-bce1-20baadaa099a', 'R_ARCHITECT', '系统架构师', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('2c8ad48f-ba6d-4c3b-8947-7a2dd7229271', 'R_PROJECT_MANAGER', '项目经理', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('fb07604a-c2f9-41e3-9044-99a4e394bc1a', 'R_DEVELPTER', '研发', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('818bae8b-087d-46b9-aa12-8e58ba004bd7', 'R_TESTER', '测试', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('a321fa04-54f0-4940-a5a3-745c06855563', 'R_OPERATOR', '运维', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('2a15389f-3226-4756-bb16-d7566dcb30c4', 'R_DEFAULT', '默认', '0', '1');
 
 -- Grant the menu privileges to the Adminitor role.  uuid_generate_v4()
 TRUNCATE TABLE public.U_ROLE_MENU_MAP RESTART IDENTITY CASCADE;
+-- Initialize ROOT Role's menu list.
 INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('9420d480-d3e8-4c47-8cb2-a0e619c68bbc', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
 INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('7f5d90ae-ccba-4a40-87af-48347b3991a1', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
 INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('481535c1-1e7e-4913-a32a-48d45fd741eb', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
@@ -508,3 +518,6 @@ INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('d76418e4-8
 INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('7b3a2f94-ad67-4b96-a4cd-2ae9f2e042b3', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
 INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('b4a8959f-4b66-403b-94f6-decc105bd285', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
 INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('a9113c19-1d61-4f7b-8e56-df5f6eb47024', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('facf6d15-fcbf-4ba5-a890-6f0ada217309', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
+-- Initialize DEFAULT Role's menu list.
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('9420d480-d3e8-4c47-8cb2-a0e619c68bbc', '2a15389f-3226-4756-bb16-d7566dcb30c4', '1');

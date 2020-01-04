@@ -26,13 +26,14 @@ CREATE TABLE public.S_SYSDICTIONARY
     STATUS smallint,
     TYPE smallint DEFAULT 1,
     COMMENTS character varying(255),
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(OWNER, FIELD, VALUE, STATUS)
 );
 
-ALTER TABLE public.S_SYSDICTIONARY OWNER to t_admin;
+ALTER TABLE public.S_SYSDICTIONARY OWNER to admin;
 COMMENT ON COLUMN public.S_SYSDICTIONARY.ID IS 'ID';
 COMMENT ON COLUMN public.S_SYSDICTIONARY.OWNER IS '字典属主，亦即类型';
 COMMENT ON COLUMN public.S_SYSDICTIONARY.FIELD IS '属主属性';
@@ -59,13 +60,14 @@ CREATE TABLE public.S_RESULT_CODE
     CODE character varying(16),
     DESCRIPTION character varying(255),
     TYPE smallint DEFAULT 1,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE)
 );
 
-ALTER TABLE public.S_RESULT_CODE OWNER to t_admin;
+ALTER TABLE public.S_RESULT_CODE OWNER to admin;
 COMMENT ON COLUMN public.S_RESULT_CODE.ID IS 'ID';
 COMMENT ON COLUMN public.S_RESULT_CODE.CATEGORY IS '结果码所属类别';
 COMMENT ON COLUMN public.S_RESULT_CODE.MODULE IS '结果码所属模块';
@@ -91,12 +93,13 @@ CREATE TABLE public.S_VERSION
     OWNER_TYPE smallint,
     OWNER_ID integer,
     DESCRIPTION character varying(255),
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.S_VERSION OWNER to t_admin;
+ALTER TABLE public.S_VERSION OWNER to admin;
 COMMENT ON COLUMN public.S_VERSION.ID IS 'ID';
 COMMENT ON COLUMN public.S_VERSION.CODE IS '版本的编码';
 COMMENT ON COLUMN public.S_VERSION.NAME IS '版本的名字';
@@ -125,12 +128,12 @@ CREATE TABLE public.S_MENU
     ROUTING character varying(255),
     I_PATH character varying(255),
     TYPE smallint DEFAULT 1,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.S_MENU OWNER to t_admin;
+ALTER TABLE public.S_MENU OWNER to admin;
 COMMENT ON COLUMN public.S_MENU.ID IS 'ID';
 COMMENT ON COLUMN public.S_MENU.CODE IS '菜单的编码';
 COMMENT ON COLUMN public.S_MENU.NAME IS '菜单的名字';
@@ -166,12 +169,13 @@ CREATE TABLE public.T_META_DATA_ITEM
     TIP character varying(255),
     REGEX character varying(255),
     REGEX_MSG character varying(255),
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_META_DATA_ITEM OWNER to t_admin;
+ALTER TABLE public.T_META_DATA_ITEM OWNER to admin;
 COMMENT ON COLUMN public.T_META_DATA_ITEM.ID IS 'ID';
 COMMENT ON COLUMN public.T_META_DATA_ITEM.CODE IS '元数据元素的编码';
 COMMENT ON COLUMN public.T_META_DATA_ITEM.NAME IS '元数据元素的名称';
@@ -197,12 +201,11 @@ CREATE TABLE public.T_META_DATA_ITEM_REF_VALUE
     ID character (36) primary key,
     ADDRESS character varying(255),
     META_DATA_ITEM_ID character (36) REFERENCES T_META_DATA_ITEM(ID),
-    CREATOR_ID character (36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_META_DATA_ITEM_REF_VALUE OWNER to t_admin;
+ALTER TABLE public.T_META_DATA_ITEM_REF_VALUE OWNER to admin;
 COMMENT ON COLUMN public.T_META_DATA_ITEM_REF_VALUE.ID IS 'ID';
 COMMENT ON COLUMN public.T_META_DATA_ITEM_REF_VALUE.ADDRESS IS '获取引用数据的API地址';
 COMMENT ON COLUMN public.T_META_DATA_ITEM_REF_VALUE.META_DATA_ITEM_ID IS '外键元数据元素的ID';
@@ -221,12 +224,11 @@ CREATE TABLE public.T_META_DATA_ITEM_ENTRY_REF_VALUE
     VALUE_URL character varying(255),
     ENTRY_TEMPLATE_TYPE smallint,
     META_DATA_ITEM_ID character (36) REFERENCES T_META_DATA_ITEM(ID),
-    CREATOR_ID character (36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_META_DATA_ITEM_ENTRY_REF_VALUE OWNER to t_admin;
+ALTER TABLE public.T_META_DATA_ITEM_ENTRY_REF_VALUE OWNER to admin;
 COMMENT ON COLUMN public.T_META_DATA_ITEM_ENTRY_REF_VALUE.ID IS 'ID';
 COMMENT ON COLUMN public.T_META_DATA_ITEM_ENTRY_REF_VALUE.QUERY_URL IS '组件引用新增查询模板地址';
 COMMENT ON COLUMN public.T_META_DATA_ITEM_ENTRY_REF_VALUE.VALUE_URL IS '组件引用编辑/查看时查询模板实例地址';
@@ -246,12 +248,11 @@ CREATE TABLE public.T_META_DATA_ITEM_DIC_VALUE
     OWNER character varying(255) NOT NULL,
     FILED character varying(255),
     META_DATA_ITEM_ID character (36) REFERENCES T_META_DATA_ITEM(ID),
-    CREATOR_ID character (36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_META_DATA_ITEM_DIC_VALUE OWNER to t_admin;
+ALTER TABLE public.T_META_DATA_ITEM_DIC_VALUE OWNER to admin;
 COMMENT ON COLUMN public.T_META_DATA_ITEM_DIC_VALUE.ID IS 'ID';
 COMMENT ON COLUMN public.T_META_DATA_ITEM_DIC_VALUE.OWNER IS '数据字典属主';
 COMMENT ON COLUMN public.T_META_DATA_ITEM_DIC_VALUE.FILED IS '数据字典属主属性，如果为空，则将属主记录均查询出来';
@@ -276,13 +277,13 @@ CREATE TABLE public.T_META_DATA_TEMPLATE
     STATUS smallint DEFAULT 1, 
     VALUE_TYPE smallint DEFAULT 0,
     VALUE_DELIMETER character varying(4) default ',',
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_META_DATA_TEMPLATE OWNER to t_admin;
+ALTER TABLE public.T_META_DATA_TEMPLATE OWNER to admin;
 COMMENT ON COLUMN public.T_META_DATA_TEMPLATE.ID IS 'ID';
 COMMENT ON COLUMN public.T_META_DATA_TEMPLATE.CODE IS '模板的编码';
 COMMENT ON COLUMN public.T_META_DATA_TEMPLATE.NAME IS '模板的名字';
@@ -314,12 +315,11 @@ CREATE TABLE public.T_META_DATA_ITEM_TEMPLATE_MAP
     VALUE_MIN character varying(255),
     VALUE_MAX character varying(255),
     VALUE_MSG character varying(255),
-    CREATOR_ID character (36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_META_DATA_ITEM_TEMPLATE_MAP OWNER to t_admin;
+ALTER TABLE public.T_META_DATA_ITEM_TEMPLATE_MAP OWNER to admin;
 COMMENT ON COLUMN public.T_META_DATA_ITEM_TEMPLATE_MAP.ID IS 'ID';
 COMMENT ON COLUMN public.T_META_DATA_ITEM_TEMPLATE_MAP.META_DATA_ITEM_ID IS '表达式和元素映射关系中元素的ID';
 COMMENT ON COLUMN public.T_META_DATA_ITEM_TEMPLATE_MAP.META_DATA_TEMPLATE_ID IS '表达式和元素映射关系中表达式的ID';
@@ -350,13 +350,13 @@ CREATE TABLE public.T_ENTRY_TEMPLATE
     TYPE smallint,
     STATUS smallint,
     VERSION_ID integer NOT NULL,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_ENTRY_TEMPLATE OWNER to t_admin;
+ALTER TABLE public.T_ENTRY_TEMPLATE OWNER to admin;
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE.ID IS 'ID';
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE.CODE IS 'Entry模板的编码';
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE.NAME IS 'Entry模板的名字';
@@ -384,12 +384,11 @@ CREATE TABLE public.T_ENTRY_TEMPLATE_MAP
     SEQ_NO smallint DEFAULT 1, 
     STATUS smallint DEFAULT 1,
     VALUE_TYPE smallint DEFAULT 0,
-    CREATOR_ID character (36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_ENTRY_TEMPLATE_MAP OWNER to t_admin;
+ALTER TABLE public.T_ENTRY_TEMPLATE_MAP OWNER to admin;
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_MAP.ID IS 'ID';
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_MAP.ENTRY_TEMPLATE_ID IS 'Entry模板的ID';
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_MAP.META_DATA_TEMPLATE_ID IS 'Entry模板元素的ID';
@@ -415,12 +414,11 @@ CREATE TABLE public.T_ENTRY_TEMPLATE_VALUE
     ENTRY_TEMPLATE_MAP_ID character (36) REFERENCES T_ENTRY_TEMPLATE_MAP(ID),
     SEQ_NO smallint DEFAULT 1, 
     STATUS smallint DEFAULT 1,
-    CREATOR_ID character (36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_ENTRY_TEMPLATE_VALUE OWNER to t_admin;
+ALTER TABLE public.T_ENTRY_TEMPLATE_VALUE OWNER to admin;
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_VALUE.ID IS 'ID';
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_VALUE.ENTRY_TEMPLATE_ID IS 'Entry模板的编码';
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_VALUE.ENTRY_TEMPLATE_MAP_ID IS 'Entry模板的名字';
@@ -443,12 +441,11 @@ CREATE TABLE public.T_ENTRY_TEMPLATE_ITEM_VALUE
     META_DATA_ITEM_TEMPLATE_MAP_ID character (36) REFERENCES T_META_DATA_ITEM_TEMPLATE_MAP(ID),
     VALUE character varying(255),
     STATUS smallint DEFAULT 1,
-    CREATOR_ID character (36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_ENTRY_TEMPLATE_ITEM_VALUE OWNER to t_admin;
+ALTER TABLE public.T_ENTRY_TEMPLATE_ITEM_VALUE OWNER to admin;
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_ITEM_VALUE.ID IS 'ID';
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_ITEM_VALUE.ENTRY_TEMPLATE_ID IS 'Entry模板的编码';
 COMMENT ON COLUMN public.T_ENTRY_TEMPLATE_ITEM_VALUE.ENTRY_TEMPLATE_MAP_ID IS 'Entry模板的名字';
@@ -477,11 +474,12 @@ CREATE TABLE public.T_CONFIGUE_TEMPLATE
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_CONFIGUE_TEMPLATE OWNER to t_admin;
+ALTER TABLE public.T_CONFIGUE_TEMPLATE OWNER to admin;
 COMMENT ON COLUMN public.T_CONFIGUE_TEMPLATE.ID IS 'ID';
 COMMENT ON COLUMN public.T_CONFIGUE_TEMPLATE.CODE IS '配置参数编码';
 COMMENT ON COLUMN public.T_CONFIGUE_TEMPLATE.NAME IS '配置参数名称';
@@ -512,11 +510,12 @@ CREATE TABLE public.T_LAUNCH_TEMPLATE
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.T_LAUNCH_TEMPLATE OWNER to t_admin;
+ALTER TABLE public.T_LAUNCH_TEMPLATE OWNER to admin;
 COMMENT ON COLUMN public.T_LAUNCH_TEMPLATE.ID IS 'ID';
 COMMENT ON COLUMN public.T_LAUNCH_TEMPLATE.CODE IS '启动命令的编码';
 COMMENT ON COLUMN public.T_LAUNCH_TEMPLATE.NAME IS '启动命令的名称';
@@ -549,14 +548,14 @@ CREATE TABLE public.P_PROJECT
     EXPECTED_DATE timestamp(0) with time zone,
     ARCHITECT_ID character (36),
     OWNER_ID character (36),
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE, STATUS)
 );
 
-ALTER TABLE public.P_PROJECT OWNER to t_admin;
+ALTER TABLE public.P_PROJECT OWNER to admin;
 COMMENT ON COLUMN public.P_PROJECT.ID IS 'ID';
 COMMENT ON COLUMN public.P_PROJECT.CODE IS 'PROJECT的编码';
 COMMENT ON COLUMN public.P_PROJECT.NAME IS 'Project的名字';
@@ -591,7 +590,7 @@ CREATE TABLE public.P_PROJECT_SETTINGS
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_PROJECT_SETTINGS OWNER to t_admin;
+ALTER TABLE public.P_PROJECT_SETTINGS OWNER to admin;
 COMMENT ON COLUMN public.P_PROJECT_SETTINGS.ID IS 'ID';
 COMMENT ON COLUMN public.P_PROJECT_SETTINGS.SINGLE_SERVICE IS '是否为单服务项目';
 COMMENT ON COLUMN public.P_PROJECT_SETTINGS.STANDALONE IS '是否为独立项目';
@@ -622,7 +621,7 @@ CREATE TABLE public.P_PROJECT_ENV
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_PROJECT_ENV OWNER to t_admin;
+ALTER TABLE public.P_PROJECT_ENV OWNER to admin;
 COMMENT ON COLUMN public.P_PROJECT_ENV.ID IS 'ID';
 COMMENT ON COLUMN public.P_PROJECT_ENV.ENV_TYPE IS 'Project环境的环境类型，参考数据字典GLOBAL.ENV_TYPE';
 COMMENT ON COLUMN public.P_PROJECT_ENV.TYPE IS '环境参数的类型:HOST, KUBERNETES, DATACENTER...，参考数据字典：PROJECT_ENV.TYPE';
@@ -648,7 +647,7 @@ CREATE TABLE public.P_PROJECT_LAUNCH
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_PROJECT_LAUNCH OWNER to t_admin;
+ALTER TABLE public.P_PROJECT_LAUNCH OWNER to admin;
 COMMENT ON COLUMN public.P_PROJECT_LAUNCH.ID IS 'ID';
 COMMENT ON COLUMN public.P_PROJECT_LAUNCH.LAUNCH_TYPE IS 'Project下Service统一的启动类型: Shell, Yaml，参考数据字典GLOBAL.LAUNCH_TYPE';
 COMMENT ON COLUMN public.P_PROJECT_LAUNCH.STATUS IS 'Project下Service统一的启动类型的状态，参考数据字典GLOBAL.STATUS';
@@ -676,7 +675,7 @@ CREATE TABLE public.P_PROJECT_TRACE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_PROJECT_TRACE OWNER to t_admin;
+ALTER TABLE public.P_PROJECT_TRACE OWNER to admin;
 COMMENT ON COLUMN public.P_PROJECT_TRACE.ID IS 'ID';
 COMMENT ON COLUMN public.P_PROJECT_TRACE.PROJECT_ID IS 'Trace所属的Project';
 COMMENT ON COLUMN public.P_PROJECT_TRACE.TYPE IS 'Project的操作类型，参考数据字典：';
@@ -706,14 +705,14 @@ CREATE TABLE public.P_SERVICE
     OWNER_ID character (36),
     PROJECT_ID integer REFERENCES P_PROJECT(ID),
     PROCESSOR_ID character (36),
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE, STATUS)
 );
 
-ALTER TABLE public.P_SERVICE OWNER to t_admin;
+ALTER TABLE public.P_SERVICE OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE.CODE IS 'SERVICE的编码,将作为服务的名字注册到注册中心，不能有空格下拉框等特殊字符';
 COMMENT ON COLUMN public.P_SERVICE.NAME IS 'Service的名字';
@@ -744,14 +743,14 @@ CREATE TABLE public.P_SERVICE_TEMPLATE
     CATEGORY smallint,
     STATUS smallint,
     TYPE smallint,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE, STATUS)
 );
 
-ALTER TABLE public.P_SERVICE_TEMPLATE OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_TEMPLATE OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_TEMPLATE.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_TEMPLATE.CODE IS 'SERVICE的编码,将作为服务的名字注册到注册中心，不能有空格下拉框等特殊字符';
 COMMENT ON COLUMN public.P_SERVICE_TEMPLATE.NAME IS 'Service的名字';
@@ -785,7 +784,7 @@ CREATE TABLE public.P_SERVICE_RELY
     UNIQUE(SRC_SERVICE_ID, DEST_SERVICE_ID, STATUS)
 );
 
-ALTER TABLE public.P_SERVICE_RELY OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_RELY OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_RELY.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_RELY.SRC_SERVICE_ID IS 'Service依赖的源ServiceID';
 COMMENT ON COLUMN public.P_SERVICE_RELY.DEST_SERVICE_ID IS 'Service依赖的目标ServiceID';
@@ -814,7 +813,7 @@ CREATE TABLE public.P_SERVICE_SETTINGS
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_SERVICE_SETTINGS OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_SETTINGS OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_SETTINGS.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_SETTINGS.CODE IS 'Settings的编码';
 COMMENT ON COLUMN public.P_SERVICE_SETTINGS.NAME IS 'Settings的名字';
@@ -841,7 +840,7 @@ CREATE TABLE public.P_SERVICE_ENV
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_SERVICE_ENV OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_ENV OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_ENV.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_ENV.ENV_TYPE IS 'SERVICE环境的环境类型，参考数据字典GLOBAL.ENV_TYPE';
 COMMENT ON COLUMN public.P_SERVICE_ENV.TYPE IS '环境参数的类型:HOST, KUBERNETES, DATACENTER...，参考数据字典：SERVICE_ENV.TYPE';
@@ -867,7 +866,7 @@ CREATE TABLE public.P_SERVICE_MAVEN_LIB
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_SERVICE_MAVEN_LIB OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_MAVEN_LIB OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_MAVEN_LIB.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_MAVEN_LIB.SERVICE_ID IS '引用Lib包的ServiceID';
 COMMENT ON COLUMN public.P_SERVICE_MAVEN_LIB.MAVEN_LIB_ID IS '引用Lib包的ID';
@@ -893,7 +892,7 @@ CREATE TABLE public.P_SERVICE_LAUNCH
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_SERVICE_LAUNCH OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_LAUNCH OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_LAUNCH.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_LAUNCH.LAUNCH_TYPE IS 'Project下某个Service的启动类型: Shell, Yaml，参考数据字典GLOBAL.LAUNCH_TYPE';
 COMMENT ON COLUMN public.P_SERVICE_LAUNCH.STATUS IS 'Project下某个Service统一的启动类型的状态，参考数据字典GLOBAL.STATUS';
@@ -920,7 +919,7 @@ CREATE TABLE public.P_SERVICE_CONFIGURE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_SERVICE_CONFIGURE OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_CONFIGURE OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_CONFIGURE.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_CONFIGURE.CONFIGURE_ITEM_ID IS 'Service的某个配置参数的ID，引用于元数据域的T_CONFIGURE_TEMPLATE.ID';
 COMMENT ON COLUMN public.P_SERVICE_CONFIGURE.CONFIGURE_ITEM_CODE IS 'Service的某个配置参数的ID，引用于元数据域的T_CONFIGURE_TEMPLATE.CODE';
@@ -948,7 +947,7 @@ CREATE TABLE public.P_SERVICE_ATTRIBUTE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_SERVICE_ATTRIBUTE OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_ATTRIBUTE OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_ATTRIBUTE.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_ATTRIBUTE.ATTRIBUTE_ID IS 'Service所引用的AttributeID';
 COMMENT ON COLUMN public.P_SERVICE_ATTRIBUTE.TYPE IS 'Service所引用参数的类型：基础参数，结构参数，参考数据字典';
@@ -974,7 +973,7 @@ CREATE TABLE public.P_SERVICE_VERSION
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_SERVICE_VERSION OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_VERSION OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_VERSION.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_VERSION.SERVICE_ID IS '所属Service的ID';
 COMMENT ON COLUMN public.P_SERVICE_VERSION.STANDARD_SERVICE_VERSION_ID IS '标准服务的版本ID：';
@@ -1003,7 +1002,7 @@ CREATE TABLE public.P_SERVICE_TRACE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.P_SERVICE_TRACE OWNER to t_admin;
+ALTER TABLE public.P_SERVICE_TRACE OWNER to admin;
 COMMENT ON COLUMN public.P_SERVICE_TRACE.ID IS 'ID';
 COMMENT ON COLUMN public.P_SERVICE_TRACE.SERVICE_ID IS '所属Service的ID';
 COMMENT ON COLUMN public.P_SERVICE_TRACE.TYPE IS '所记录的Trace的动作类型，参考数据字典：';
@@ -1035,13 +1034,13 @@ CREATE TABLE public.I_ENTRY
     ENTRY_TEMPLATE_ID character (36),
     VERSION_ID integer REFERENCES S_VERSION(ID),
     MD5_SIG character (32),
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.I_ENTRY OWNER to t_admin;
+ALTER TABLE public.I_ENTRY OWNER to admin;
 COMMENT ON COLUMN public.I_ENTRY.ID IS 'ID';
 COMMENT ON COLUMN public.I_ENTRY.CODE IS 'Entry的编码';
 COMMENT ON COLUMN public.I_ENTRY.NAME IS 'Entry的名字';
@@ -1075,7 +1074,7 @@ CREATE TABLE public.I_ENTRY_VALUE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.I_ENTRY_VALUE OWNER to t_admin;
+ALTER TABLE public.I_ENTRY_VALUE OWNER to admin;
 COMMENT ON COLUMN public.I_ENTRY_VALUE.ID IS 'ID';
 COMMENT ON COLUMN public.I_ENTRY_VALUE.ENTRY_ID IS 'Value所属Entry的ID';
 COMMENT ON COLUMN public.I_ENTRY_VALUE.ENTRY_TEMPLATE_ID IS 'Entry模板的编码';
@@ -1105,7 +1104,7 @@ CREATE TABLE public.I_ENTRY_ITEM_VALUE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.I_ENTRY_ITEM_VALUE OWNER to t_admin;
+ALTER TABLE public.I_ENTRY_ITEM_VALUE OWNER to admin;
 COMMENT ON COLUMN public.I_ENTRY_ITEM_VALUE.ID IS 'ID';
 COMMENT ON COLUMN public.I_ENTRY_ITEM_VALUE.ENTRY_ID IS 'Value所属Entry的ID';
 COMMENT ON COLUMN public.I_ENTRY_ITEM_VALUE.ENTRY_VALUE_ID IS 'Item所属Entry Value的ID';
@@ -1136,7 +1135,7 @@ CREATE TABLE public.A_ATTRIBUTE_TYPE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.A_ATTRIBUTE_TYPE OWNER to t_admin;
+ALTER TABLE public.A_ATTRIBUTE_TYPE OWNER to admin;
 COMMENT ON COLUMN public.A_ATTRIBUTE_TYPE.ID IS 'ID';
 COMMENT ON COLUMN public.A_ATTRIBUTE_TYPE.NAME IS '属性的名称';
 COMMENT ON COLUMN public.A_ATTRIBUTE_TYPE.CLASS_NAME IS '属性的实现类';
@@ -1161,7 +1160,7 @@ CREATE TABLE public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP OWNER to t_admin;
+ALTER TABLE public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP OWNER to admin;
 COMMENT ON COLUMN public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP.ID IS 'ID';
 COMMENT ON COLUMN public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP.ATTRIBUTE_TYPE_ID IS '属性的ID';
 COMMENT ON COLUMN public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP.SQL_TYPE IS '所映射的SQL的类型，参考数据字典GLOBAL.SQL_TYPE';
@@ -1187,13 +1186,14 @@ CREATE TABLE public.A_ATTRIBUTE
     COMMENTS character varying(255),
     SERVICE_ID integer,
     PROJECT_ID integer,
+    CREATOR_ID bigint,
     TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE, STATUS)
 );
 
-ALTER TABLE public.A_ATTRIBUTE OWNER to t_admin;
+ALTER TABLE public.A_ATTRIBUTE OWNER to admin;
 COMMENT ON COLUMN public.A_ATTRIBUTE.ID IS 'ID';
 COMMENT ON COLUMN public.A_ATTRIBUTE.CODE IS '将作为StructAttribute的TypeName';
 COMMENT ON COLUMN public.A_ATTRIBUTE.NAME IS '属性的名称';
@@ -1220,12 +1220,13 @@ CREATE TABLE public.A_STRUCT_ATTRIBUTE_TYPE
     COMMENTS character varying(255),
     PROJECT_CODE character varying(255) NOT NULL DEFAULT 'GLOBAL',
     PROJECT_ID integer,
+    CREATOR_ID bigint,
     TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.A_STRUCT_ATTRIBUTE_TYPE OWNER to t_admin;
+ALTER TABLE public.A_STRUCT_ATTRIBUTE_TYPE OWNER to admin;
 COMMENT ON COLUMN public.A_STRUCT_ATTRIBUTE_TYPE.ID IS 'ID';
 COMMENT ON COLUMN public.A_STRUCT_ATTRIBUTE_TYPE.CODE IS '将作为StructAttribute的TypeName';
 COMMENT ON COLUMN public.A_STRUCT_ATTRIBUTE_TYPE.NAME IS '属性的名称';
@@ -1255,7 +1256,7 @@ CREATE TABLE public.A_STRUCT_ATTRIBUTE_ITEM
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.A_STRUCT_ATTRIBUTE_ITEM OWNER to t_admin;
+ALTER TABLE public.A_STRUCT_ATTRIBUTE_ITEM OWNER to admin;
 COMMENT ON COLUMN public.A_STRUCT_ATTRIBUTE_ITEM.ID IS 'ID';
 COMMENT ON COLUMN public.A_STRUCT_ATTRIBUTE_ITEM.CODE IS '将作为StructAttribute的name';
 COMMENT ON COLUMN public.A_STRUCT_ATTRIBUTE_ITEM.NAME IS '属性的名称, 中文名称';
@@ -1295,11 +1296,12 @@ CREATE TABLE public.E_HOSTS
     DEPLOY_PATH character varying(255),
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_HOSTS OWNER to t_admin;
+ALTER TABLE public.E_HOSTS OWNER to admin;
 COMMENT ON COLUMN public.E_HOSTS.ID IS 'ID';
 COMMENT ON COLUMN public.E_HOSTS.CODE IS '主机编码';
 COMMENT ON COLUMN public.E_HOSTS.IP IS '主机的IP';
@@ -1336,11 +1338,12 @@ CREATE TABLE public.E_KUBERNETES
     NAMESPACE character varying(255),
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_KUBERNETES OWNER to t_admin;
+ALTER TABLE public.E_KUBERNETES OWNER to admin;
 COMMENT ON COLUMN public.E_KUBERNETES.ID IS 'ID';
 COMMENT ON COLUMN public.E_KUBERNETES.CODE IS 'Kuibernetes编码';
 COMMENT ON COLUMN public.E_KUBERNETES.NAME IS 'Kuibernetes的名称';
@@ -1376,11 +1379,12 @@ CREATE TABLE public.E_DATA_SOURCE
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_DATA_SOURCE OWNER to t_admin;
+ALTER TABLE public.E_DATA_SOURCE OWNER to admin;
 COMMENT ON COLUMN public.E_DATA_SOURCE.ID IS 'ID';
 COMMENT ON COLUMN public.E_DATA_SOURCE.CODE IS '数据库编码';
 COMMENT ON COLUMN public.E_DATA_SOURCE.NAME IS '数据库的名称';
@@ -1418,11 +1422,12 @@ CREATE TABLE public.E_DATA_CACHE
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_DATA_CACHE OWNER to t_admin;
+ALTER TABLE public.E_DATA_CACHE OWNER to admin;
 COMMENT ON COLUMN public.E_DATA_CACHE.ID IS 'ID';
 COMMENT ON COLUMN public.E_DATA_CACHE.CODE IS '缓存编码';
 COMMENT ON COLUMN public.E_DATA_CACHE.NAME IS '缓存的名称';
@@ -1465,7 +1470,7 @@ CREATE TABLE public.E_MESSAGE_QUEUE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_MESSAGE_QUEUE OWNER to t_admin;
+ALTER TABLE public.E_MESSAGE_QUEUE OWNER to admin;
 COMMENT ON COLUMN public.E_MESSAGE_QUEUE.ID IS 'ID';
 COMMENT ON COLUMN public.E_MESSAGE_QUEUE.CODE IS '缓存编码';
 COMMENT ON COLUMN public.E_MESSAGE_QUEUE.NAME IS '缓存的名称';
@@ -1499,11 +1504,12 @@ CREATE TABLE public.E_GIT
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_GIT OWNER to t_admin;
+ALTER TABLE public.E_GIT OWNER to admin;
 COMMENT ON COLUMN public.E_GIT.ID IS 'ID';
 COMMENT ON COLUMN public.E_GIT.CODE IS 'GIT编码';
 COMMENT ON COLUMN public.E_GIT.NAME IS 'GIT的名称';
@@ -1533,11 +1539,12 @@ CREATE TABLE public.E_MAVEN
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_MAVEN OWNER to t_admin;
+ALTER TABLE public.E_MAVEN OWNER to admin;
 COMMENT ON COLUMN public.E_MAVEN.ID IS 'ID';
 COMMENT ON COLUMN public.E_MAVEN.CODE IS 'Maven编码';
 COMMENT ON COLUMN public.E_MAVEN.NAME IS 'Maven的名称';
@@ -1564,11 +1571,12 @@ CREATE TABLE public.E_MAVEN_LIB
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_MAVEN_LIB OWNER to t_admin;
+ALTER TABLE public.E_MAVEN_LIB OWNER to admin;
 COMMENT ON COLUMN public.E_MAVEN_LIB.ID IS 'ID';
 COMMENT ON COLUMN public.E_MAVEN_LIB.MAVEN_ID IS '所在Maven仓库ID';
 COMMENT ON COLUMN public.E_MAVEN_LIB.GROUP_ID IS 'lib包的groupId';
@@ -1598,11 +1606,12 @@ CREATE TABLE public.E_DOCKER_HUB
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
+    TENANT_ID character(36),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.E_DOCKER_HUB OWNER to t_admin;
+ALTER TABLE public.E_DOCKER_HUB OWNER to admin;
 COMMENT ON COLUMN public.E_DOCKER_HUB.ID IS 'ID';
 COMMENT ON COLUMN public.E_DOCKER_HUB.CODE IS 'Docker Hub编码';
 COMMENT ON COLUMN public.E_DOCKER_HUB.NAME IS 'Docker Hub的名称';
@@ -1639,7 +1648,7 @@ CREATE TABLE public.U_ORGANIZATION
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.U_ORGANIZATION OWNER to t_admin;
+ALTER TABLE public.U_ORGANIZATION OWNER to admin;
 COMMENT ON COLUMN public.U_ORGANIZATION.ID IS 'ID';
 COMMENT ON COLUMN public.U_ORGANIZATION.CODE IS '部门编码';
 COMMENT ON COLUMN public.U_ORGANIZATION.NAME IS '部门名称';
@@ -1670,7 +1679,7 @@ CREATE TABLE public.U_ROLE
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.U_ROLE OWNER to t_admin;
+ALTER TABLE public.U_ROLE OWNER to admin;
 COMMENT ON COLUMN public.U_ROLE.ID IS 'ID';
 COMMENT ON COLUMN public.U_ROLE.CODE IS '角色编码';
 COMMENT ON COLUMN public.U_ROLE.NAME IS '角色名称';
@@ -1697,7 +1706,7 @@ CREATE TABLE public.U_ROLE_MENU_MAP
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.U_ROLE_MENU_MAP OWNER to t_admin;
+ALTER TABLE public.U_ROLE_MENU_MAP OWNER to admin;
 COMMENT ON COLUMN public.U_ROLE_MENU_MAP.ID IS 'ID';
 COMMENT ON COLUMN public.U_ROLE_MENU_MAP.MENU_ID IS '菜单的ID，非本域的引用，非外键';
 COMMENT ON COLUMN public.U_ROLE_MENU_MAP.ROLE_ID IS '角色ID';
@@ -1723,7 +1732,7 @@ CREATE TABLE public.U_TENANT
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.U_TENANT OWNER to t_admin;
+ALTER TABLE public.U_TENANT OWNER to admin;
 COMMENT ON COLUMN public.U_TENANT.ID IS 'ID';
 COMMENT ON COLUMN public.U_TENANT.CODE IS '租户的编码';
 COMMENT ON COLUMN public.U_TENANT.NAME IS '租户的名称';
@@ -1756,7 +1765,7 @@ CREATE TABLE public.U_USER
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.U_USER OWNER to t_admin;
+ALTER TABLE public.U_USER OWNER to admin;
 COMMENT ON COLUMN public.U_USER.ID IS 'ID';
 COMMENT ON COLUMN public.U_USER.LOGIN_NAME IS '登录用户名';
 COMMENT ON COLUMN public.U_USER.PASSWORD IS '登录密码';
@@ -1788,12 +1797,11 @@ CREATE TABLE public.U_USER_INFO
     SEC_ANSWER character varying(255),
     TENANT_ID character(36),
     USER_ID serial8,
-    CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.U_USER_INFO OWNER to t_admin;
+ALTER TABLE public.U_USER_INFO OWNER to admin;
 COMMENT ON COLUMN public.U_USER_INFO.ID IS 'ID';
 COMMENT ON COLUMN public.U_USER_INFO.NAME IS '用户的名称';
 COMMENT ON COLUMN public.U_USER_INFO.GENDER IS '用户的性别';
@@ -1818,11 +1826,12 @@ CREATE TABLE public.U_USER_ORG_MAP
     USER_ID bigint REFERENCES U_USER_INFO(ID),
     ORG_ID integer REFERENCES U_ORGANIZATION(ID),
     STATUS smallint,
+    CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.U_USER_ORG_MAP OWNER to t_admin;
+ALTER TABLE public.U_USER_ORG_MAP OWNER to admin;
 COMMENT ON COLUMN public.U_USER_ORG_MAP.ID IS 'ID';
 COMMENT ON COLUMN public.U_USER_ORG_MAP.USER_ID IS '用户的ID';
 COMMENT ON COLUMN public.U_USER_ORG_MAP.ORG_ID IS '所负责部门的ID';
@@ -1841,11 +1850,12 @@ CREATE TABLE public.U_USER_ROLE_MAP
     USER_ID bigint REFERENCES U_USER_INFO(ID),
     ROLE_ID character(36) REFERENCES U_ROLE(ID),
     STATUS smallint,
+    CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
 
-ALTER TABLE public.U_USER_ROLE_MAP OWNER to t_admin;
+ALTER TABLE public.U_USER_ROLE_MAP OWNER to admin;
 COMMENT ON COLUMN public.U_USER_ROLE_MAP.ID IS 'ID';
 COMMENT ON COLUMN public.U_USER_ROLE_MAP.USER_ID IS '用户的ID';
 COMMENT ON COLUMN public.U_USER_ROLE_MAP.ROLE_ID IS '所拥有角色的ID';
