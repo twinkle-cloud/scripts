@@ -1762,7 +1762,8 @@ CREATE TABLE public.U_USER
     NEXT_REFRESH_DATE timestamp(0) with time zone,
     EXPIRED_DATE timestamp(0) with time zone,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
-    UPDATE_DATE timestamp(0) with time zone DEFAULT now()
+    UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
+    UNIQUE(LOGIN_NAME, STATUS)
 );
 
 ALTER TABLE public.U_USER OWNER to admin;
@@ -1792,11 +1793,12 @@ CREATE TABLE public.U_USER_INFO
     GENDER smallint,
     TITLE smallint,
     STATUS smallint,
-    E_MAIL character varying(128),
+    EMAIL character varying(128),
     SEC_QUESTION smallint,
     SEC_ANSWER character varying(255),
     TENANT_ID character(36),
-    USER_ID serial8,
+    ORG_ID int,
+    USER_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1807,11 +1809,12 @@ COMMENT ON COLUMN public.U_USER_INFO.NAME IS '用户的名称';
 COMMENT ON COLUMN public.U_USER_INFO.GENDER IS '用户的性别';
 COMMENT ON COLUMN public.U_USER_INFO.TITLE IS '用户的职位，参考字典的USER.TITLE';
 COMMENT ON COLUMN public.U_USER_INFO.STATUS IS '用户的状态，参考字典的GLOBAL.STATUS';
-COMMENT ON COLUMN public.U_USER_INFO.E_MAIL IS 'Email地址';
+COMMENT ON COLUMN public.U_USER_INFO.EMAIL IS 'Email地址';
 COMMENT ON COLUMN public.U_USER_INFO.SEC_QUESTION IS '安全问题，参考数据字典';
 COMMENT ON COLUMN public.U_USER_INFO.SEC_ANSWER IS '安全问题的答案';
 COMMENT ON COLUMN public.U_USER_INFO.TENANT_ID IS '用户所属的租户ID';
-COMMENT ON COLUMN public.U_USER_INFO.USER_ID IS '用户的的账号ID';
+COMMENT ON COLUMN public.U_USER_INFO.ORG_ID IS '用户所属部门的ID';
+COMMENT ON COLUMN public.U_USER_INFO.USER_ID IS '用户的账号ID';
 
 -- Enable the trigger to update the UPDATE_DATE automatically.
 CREATE TRIGGER T_UD_U_USER_INFO BEFORE UPDATE ON public.U_USER_INFO
@@ -1823,7 +1826,7 @@ DROP TABLE IF EXISTS public.U_USER_ORG_MAP CASCADE;
 CREATE TABLE public.U_USER_ORG_MAP
 (
     ID serial primary key,
-    USER_ID bigint REFERENCES U_USER_INFO(ID),
+    USER_ID bigint REFERENCES U_USER(ID),
     ORG_ID integer REFERENCES U_ORGANIZATION(ID),
     STATUS smallint,
     CREATOR_ID bigint,
@@ -1847,7 +1850,7 @@ DROP TABLE IF EXISTS public.U_USER_ROLE_MAP CASCADE;
 CREATE TABLE public.U_USER_ROLE_MAP
 (
     ID serial primary key,
-    USER_ID bigint REFERENCES U_USER_INFO(ID),
+    USER_ID bigint REFERENCES U_USER(ID),
     ROLE_ID character(36) REFERENCES U_ROLE(ID),
     STATUS smallint,
     CREATOR_ID bigint,
