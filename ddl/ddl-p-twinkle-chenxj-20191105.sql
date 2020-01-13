@@ -27,7 +27,7 @@ CREATE TABLE public.S_SYSDICTIONARY
     TYPE smallint DEFAULT 1,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(OWNER, FIELD, VALUE, STATUS)
@@ -61,7 +61,7 @@ CREATE TABLE public.S_RESULT_CODE
     DESCRIPTION character varying(255),
     TYPE smallint DEFAULT 1,
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE)
@@ -94,7 +94,7 @@ CREATE TABLE public.S_VERSION
     OWNER_ID integer,
     DESCRIPTION character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -119,10 +119,10 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.S_MENU CASCADE;
 CREATE TABLE public.S_MENU
 (
-    ID character(36) primary key,
+    ID character(32) primary key,
     CODE character varying(255),
     NAME character varying(255),
-    PARENT_ID character(36),
+    PARENT_ID character(32),
     SEQ_NO smallint DEFAULT 1,
     STATUS smallint DEFAULT 1,
     ROUTING character varying(255),
@@ -157,7 +157,7 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_META_DATA_ITEM CASCADE;
 CREATE TABLE public.T_META_DATA_ITEM
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     CODE character varying(255) NOT NULL,
     NAME character varying(255) NOT NULL,
     LABEL character varying(255) NOT NULL,
@@ -170,7 +170,7 @@ CREATE TABLE public.T_META_DATA_ITEM
     REGEX character varying(255),
     REGEX_MSG character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -198,9 +198,9 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_META_DATA_ITEM_REF_VALUE CASCADE;
 CREATE TABLE public.T_META_DATA_ITEM_REF_VALUE
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     ADDRESS character varying(255),
-    META_DATA_ITEM_ID character (36) REFERENCES T_META_DATA_ITEM(ID),
+    META_DATA_ITEM_ID character(32) REFERENCES T_META_DATA_ITEM(ID),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -219,11 +219,11 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_META_DATA_ITEM_ENTRY_REF_VALUE CASCADE;
 CREATE TABLE public.T_META_DATA_ITEM_ENTRY_REF_VALUE
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     QUERY_URL character varying(255),
     VALUE_URL character varying(255),
     ENTRY_TEMPLATE_TYPE smallint,
-    META_DATA_ITEM_ID character (36) REFERENCES T_META_DATA_ITEM(ID),
+    META_DATA_ITEM_ID character(32) REFERENCES T_META_DATA_ITEM(ID),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -244,10 +244,10 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_META_DATA_ITEM_DIC_VALUE CASCADE;
 CREATE TABLE public.T_META_DATA_ITEM_DIC_VALUE
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     OWNER character varying(255) NOT NULL,
     FILED character varying(255),
-    META_DATA_ITEM_ID character (36) REFERENCES T_META_DATA_ITEM(ID),
+    META_DATA_ITEM_ID character(32) REFERENCES T_META_DATA_ITEM(ID),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -268,7 +268,7 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_META_DATA_TEMPLATE CASCADE;
 CREATE TABLE public.T_META_DATA_TEMPLATE
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     CODE character varying(255) NOT NULL,
     NAME character varying(255) NOT NULL,
     LABEL character varying(255) NOT NULL,
@@ -278,7 +278,7 @@ CREATE TABLE public.T_META_DATA_TEMPLATE
     VALUE_TYPE smallint DEFAULT 0,
     VALUE_DELIMETER character varying(4) default ',',
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -303,9 +303,9 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_META_DATA_ITEM_TEMPLATE_MAP CASCADE;
 CREATE TABLE public.T_META_DATA_ITEM_TEMPLATE_MAP
 (
-    ID character (36) primary key,
-    META_DATA_ITEM_ID character (36) REFERENCES T_META_DATA_ITEM(ID),
-    META_DATA_TEMPLATE_ID character (36) REFERENCES T_META_DATA_TEMPLATE(ID),
+    ID character(32) primary key,
+    META_DATA_ITEM_ID character(32) REFERENCES T_META_DATA_ITEM(ID),
+    META_DATA_TEMPLATE_ID character(32) REFERENCES T_META_DATA_TEMPLATE(ID),
     VISIBLE bool DEFAULT true,
     EIDITABLE bool DEFAULT true,
     MANDATORY bool DEFAULT true,
@@ -342,7 +342,7 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_ENTRY_TEMPLATE CASCADE;
 CREATE TABLE public.T_ENTRY_TEMPLATE
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     CODE character varying(255) NOT NULL,
     NAME character varying(255) NOT NULL,
     LABEL character varying(255) NOT NULL,
@@ -351,7 +351,7 @@ CREATE TABLE public.T_ENTRY_TEMPLATE
     STATUS smallint,
     VERSION_ID integer NOT NULL,
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -375,9 +375,9 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_ENTRY_TEMPLATE_MAP CASCADE;
 CREATE TABLE public.T_ENTRY_TEMPLATE_MAP
 (
-    ID character (36) primary key,
-    ENTRY_TEMPLATE_ID character (36) REFERENCES T_ENTRY_TEMPLATE(ID),
-    META_DATA_TEMPLATE_ID character (36) REFERENCES T_META_DATA_TEMPLATE(ID),
+    ID character(32) primary key,
+    ENTRY_TEMPLATE_ID character(32) REFERENCES T_ENTRY_TEMPLATE(ID),
+    META_DATA_TEMPLATE_ID character(32) REFERENCES T_META_DATA_TEMPLATE(ID),
     VISIBLE bool DEFAULT true,
     EIDITABLE bool DEFAULT true,
     MANDATORY bool DEFAULT false,
@@ -409,9 +409,9 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_ENTRY_TEMPLATE_VALUE CASCADE;
 CREATE TABLE public.T_ENTRY_TEMPLATE_VALUE
 (
-    ID character (36) primary key,
-    ENTRY_TEMPLATE_ID character (36) REFERENCES T_ENTRY_TEMPLATE(ID),
-    ENTRY_TEMPLATE_MAP_ID character (36) REFERENCES T_ENTRY_TEMPLATE_MAP(ID),
+    ID character(32) primary key,
+    ENTRY_TEMPLATE_ID character(32) REFERENCES T_ENTRY_TEMPLATE(ID),
+    ENTRY_TEMPLATE_MAP_ID character(32) REFERENCES T_ENTRY_TEMPLATE_MAP(ID),
     SEQ_NO smallint DEFAULT 1, 
     STATUS smallint DEFAULT 1,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
@@ -435,10 +435,10 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_ENTRY_TEMPLATE_ITEM_VALUE CASCADE;
 CREATE TABLE public.T_ENTRY_TEMPLATE_ITEM_VALUE
 (
-    ID character (36) primary key,
-    ENTRY_TEMPLATE_ID character (36) REFERENCES T_ENTRY_TEMPLATE(ID),
-    ENTRY_TEMPLATE_MAP_ID character (36) REFERENCES T_ENTRY_TEMPLATE_MAP(ID),
-    META_DATA_ITEM_TEMPLATE_MAP_ID character (36) REFERENCES T_META_DATA_ITEM_TEMPLATE_MAP(ID),
+    ID character(32) primary key,
+    ENTRY_TEMPLATE_ID character(32) REFERENCES T_ENTRY_TEMPLATE(ID),
+    ENTRY_TEMPLATE_MAP_ID character(32) REFERENCES T_ENTRY_TEMPLATE_MAP(ID),
+    META_DATA_ITEM_TEMPLATE_MAP_ID character(32) REFERENCES T_META_DATA_ITEM_TEMPLATE_MAP(ID),
     VALUE character varying(255),
     STATUS smallint DEFAULT 1,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
@@ -462,19 +462,19 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_CONFIGUE_TEMPLATE CASCADE;
 CREATE TABLE public.T_CONFIGUE_TEMPLATE
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     CODE character varying(255) NOT NULL,
     NAME character varying(255) NOT NULL,
     TYPE smallint,
     CATEGORY smallint,
     MUTABLE bool DEFAULT false,
-    META_DATA_ITEM_ID character (36) REFERENCES T_META_DATA_ITEM(ID),
+    META_DATA_ITEM_ID character(32) REFERENCES T_META_DATA_ITEM(ID),
     STATUS smallint,
     PARENT_ID integer,
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -501,7 +501,7 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.T_LAUNCH_TEMPLATE CASCADE;
 CREATE TABLE public.T_LAUNCH_TEMPLATE
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     CODE character varying(255) NOT NULL,
     NAME character varying(255) NOT NULL,
     LAUNCH_TYPE smallint,
@@ -510,7 +510,7 @@ CREATE TABLE public.T_LAUNCH_TEMPLATE
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -546,10 +546,10 @@ CREATE TABLE public.P_PROJECT
     TYPE smallint DEFAULT 0,
     STATUS smallint,
     EXPECTED_DATE timestamp(0) with time zone,
-    ARCHITECT_ID character (36),
-    OWNER_ID character (36),
+    ARCHITECT_ID bigint,
+    OWNER_ID bigint,
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE, STATUS)
@@ -668,7 +668,7 @@ CREATE TABLE public.P_PROJECT_TRACE
     PROJECT_ID integer REFERENCES P_PROJECT(ID),
     TYPE smallint,
     STATUS smallint,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     ORG_SOURCE character varying(255),
     DEST_SOURCE character varying(255),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
@@ -701,12 +701,12 @@ CREATE TABLE public.P_SERVICE
     STATUS smallint,
     TYPE smallint,
     EXPECTED_DATE timestamp(0) with time zone,
-    ARCHITECT_ID character (36),
-    OWNER_ID character (36),
+    ARCHITECT_ID bigint,
+    OWNER_ID bigint,
     PROJECT_ID integer REFERENCES P_PROJECT(ID),
-    PROCESSOR_ID character (36),
+    PROCESSOR_ID bigint,
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE, STATUS)
@@ -744,7 +744,7 @@ CREATE TABLE public.P_SERVICE_TEMPLATE
     STATUS smallint,
     TYPE smallint,
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE, STATUS)
@@ -778,7 +778,7 @@ CREATE TABLE public.P_SERVICE_RELY
     DESCRIPTION text,
     STATUS smallint,
     TYPE smallint,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(SRC_SERVICE_ID, DEST_SERVICE_ID, STATUS)
@@ -909,7 +909,7 @@ DROP TABLE IF EXISTS public.P_SERVICE_CONFIGURE CASCADE;
 CREATE TABLE public.P_SERVICE_CONFIGURE
 (
     ID serial primary key,
-    CONFIGURE_ITEM_ID character(36),
+    CONFIGURE_ITEM_ID character(32),
     CONFIGURE_ITEM_CODE character varying(255),
     STATUS smallint,
     VALUE character varying(255),
@@ -968,7 +968,7 @@ CREATE TABLE public.P_SERVICE_VERSION
     SERVICE_LIB_VERSION_ID integer,
     SERVICE_TEMPLATE_VERSION_ID integer NOT NULL,
     STATUS smallint,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -995,7 +995,7 @@ CREATE TABLE public.P_SERVICE_TRACE
     SERVICE_ID integer REFERENCES P_SERVICE(ID),
     TYPE smallint,
     STATUS smallint,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     ORG_SOURCE character varying(255),
     DEST_SOURCE character varying(255),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
@@ -1031,11 +1031,11 @@ CREATE TABLE public.I_ENTRY
     DESCRIPTION text,
     TYPE smallint,
     STATUS smallint,
-    ENTRY_TEMPLATE_ID character (36),
+    ENTRY_TEMPLATE_ID character(32),
     VERSION_ID integer REFERENCES S_VERSION(ID),
     MD5_SIG character (32),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1065,11 +1065,11 @@ CREATE TABLE public.I_ENTRY_VALUE
 (
     ID serial primary key,
     ENTRY_ID integer REFERENCES I_ENTRY(ID),
-    ENTRY_TEMPLATE_ID character (36),
-    ENTRY_TEMPLATE_MAP_ID character (36),
+    ENTRY_TEMPLATE_ID character(32),
+    ENTRY_TEMPLATE_MAP_ID character(32),
     SEQ_NO smallint DEFAULT 1, 
     STATUS smallint DEFAULT 1,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1095,11 +1095,11 @@ CREATE TABLE public.I_ENTRY_ITEM_VALUE
     ID serial primary key,
     ENTRY_ID integer REFERENCES I_ENTRY(ID),
     ENTRY_VALUE_ID integer REFERENCES I_ENTRY_VALUE(ID),
-    ENTRY_TEMPLATE_MAP_ID character (36),
-    META_DATA_ITEM_TEMPLATE_MAP_ID character (36),
+    ENTRY_TEMPLATE_MAP_ID character(32),
+    META_DATA_ITEM_TEMPLATE_MAP_ID character(32),
     VALUE character varying(255),
     STATUS smallint DEFAULT 1,
-    CREATOR_ID character (36),
+    CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1126,7 +1126,7 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.A_ATTRIBUTE_TYPE CASCADE;
 CREATE TABLE public.A_ATTRIBUTE_TYPE
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     NAME character varying(255),
     CLASS_NAME character varying(255) NOT NULL,
     STATUS smallint DEFAULT 1,
@@ -1151,8 +1151,8 @@ EXECUTE PROCEDURE T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP CASCADE;
 CREATE TABLE public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP
 (
-    ID character (36) primary key,
-    ATTRIBUTE_TYPE_ID character (36) REFERENCES A_ATTRIBUTE_TYPE(ID),
+    ID character(32) primary key,
+    ATTRIBUTE_TYPE_ID character(32) REFERENCES A_ATTRIBUTE_TYPE(ID),
     SQL_TYPE smallint NOT NULL,
     STATUS smallint,
     COMMENTS character varying(255),
@@ -1180,14 +1180,14 @@ CREATE TABLE public.A_ATTRIBUTE
     ID serial primary key,
     CODE character varying(255) NOT NULL,
     NAME character varying(255) NOT NULL,
-    ATTRIBUTE_TYPE_ID character (36) REFERENCES A_ATTRIBUTE_TYPE(ID),
+    ATTRIBUTE_TYPE_ID character(32) REFERENCES A_ATTRIBUTE_TYPE(ID),
     SUB_TYPE character varying(255),
     STATUS smallint,
     COMMENTS character varying(255),
     SERVICE_ID integer,
     PROJECT_ID integer,
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now(),
     UNIQUE(CODE, STATUS)
@@ -1221,7 +1221,7 @@ CREATE TABLE public.A_STRUCT_ATTRIBUTE_TYPE
     PROJECT_CODE character varying(255) NOT NULL DEFAULT 'GLOBAL',
     PROJECT_ID integer,
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1296,7 +1296,7 @@ CREATE TABLE public.E_HOSTS
     DEPLOY_PATH character varying(255),
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1338,7 +1338,7 @@ CREATE TABLE public.E_KUBERNETES
     NAMESPACE character varying(255),
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1379,7 +1379,7 @@ CREATE TABLE public.E_DATA_SOURCE
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1422,7 +1422,7 @@ CREATE TABLE public.E_DATA_CACHE
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1465,7 +1465,7 @@ CREATE TABLE public.E_MESSAGE_QUEUE
     VERSION smallint NOT NULL,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1504,7 +1504,7 @@ CREATE TABLE public.E_GIT
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1539,7 +1539,7 @@ CREATE TABLE public.E_MAVEN
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1571,7 +1571,7 @@ CREATE TABLE public.E_MAVEN_LIB
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1606,7 +1606,7 @@ CREATE TABLE public.E_DOCKER_HUB
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1643,7 +1643,7 @@ CREATE TABLE public.U_ORGANIZATION
     STATUS smallint,
     COMMENTS character varying(255),
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1667,14 +1667,14 @@ EXECUTE PROCEDURE public.T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.U_ROLE CASCADE;
 CREATE TABLE public.U_ROLE
 (
-    ID character(36) primary key,
+    ID character(32) primary key,
     CODE character varying(255) NOT NULL,
     NAME character varying(255) NOT NULL,
     STATUS smallint DEFAULT 1,
     COMMENTS character varying(255),
     TYPE smallint DEFAULT 1,
     CREATOR_ID bigint,
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1698,8 +1698,8 @@ DROP TABLE IF EXISTS public.U_ROLE_MENU_MAP CASCADE;
 CREATE TABLE public.U_ROLE_MENU_MAP
 (
     ID serial primary key,
-    MENU_ID character(36) NOT NULL,
-    ROLE_ID character(36) REFERENCES U_ROLE(ID),
+    MENU_ID character(32) NOT NULL,
+    ROLE_ID character(32) REFERENCES U_ROLE(ID),
     STATUS smallint,
     CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
@@ -1721,13 +1721,18 @@ EXECUTE PROCEDURE public.T_UPDATE_DATE();
 DROP TABLE IF EXISTS public.U_TENANT CASCADE;
 CREATE TABLE public.U_TENANT
 (
-    ID character (36) primary key,
+    ID character(32) primary key,
     CODE character varying(255) NOT NULL,
     NAME character varying(255) NOT NULL,
-    LOGO character varying(255) NOT NULL,
+    LOGO character(32) NOT NULL,
+    SCALE smallint,
     TYPE smallint,
     STATUS smallint,
     INDUSTRY smallint,
+    CONTACTER character varying(255),
+    CONTACT_TEL character varying(32),
+    EMAIL character varying(128),
+    COMMENTS character varying(512),
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
     UPDATE_DATE timestamp(0) with time zone DEFAULT now()
 );
@@ -1737,6 +1742,7 @@ COMMENT ON COLUMN public.U_TENANT.ID IS 'ID';
 COMMENT ON COLUMN public.U_TENANT.CODE IS '租户的编码';
 COMMENT ON COLUMN public.U_TENANT.NAME IS '租户的名称';
 COMMENT ON COLUMN public.U_TENANT.LOGO IS '租户的Logo';
+COMMENT ON COLUMN public.U_TENANT.SCALE IS '租户的规模：';
 COMMENT ON COLUMN public.U_TENANT.TYPE IS '租户的类型：';
 COMMENT ON COLUMN public.U_TENANT.STATUS IS '租户的状态，参考字典的GLOBAL.STATUS';
 COMMENT ON COLUMN public.U_TENANT.STATUS IS '租户的行业，参考字典的GLOBAL.INDUSTRY';
@@ -1796,7 +1802,7 @@ CREATE TABLE public.U_USER_INFO
     EMAIL character varying(128),
     SEC_QUESTION smallint,
     SEC_ANSWER character varying(255),
-    TENANT_ID character(36),
+    TENANT_ID character(32),
     ORG_ID int,
     USER_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),
@@ -1851,7 +1857,7 @@ CREATE TABLE public.U_USER_ROLE_MAP
 (
     ID serial primary key,
     USER_ID bigint REFERENCES U_USER(ID),
-    ROLE_ID character(36) REFERENCES U_ROLE(ID),
+    ROLE_ID character(32) REFERENCES U_ROLE(ID),
     STATUS smallint,
     CREATOR_ID bigint,
     CREATE_DATE timestamp(0) with time zone DEFAULT now(),

@@ -346,49 +346,49 @@ INSERT INTO public.s_sysdictionary(owner, field, value, code, text, status, type
 
 TRUNCATE TABLE public.A_ATTRIBUTE_TYPE RESTART IDENTITY CASCADE;
 
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('c769ef94-36bc-4839-9d2f-b29b825c5839', 'BinaryAttribute', 'com.twinkle.framework.core.lang.BinaryAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('0f2e5712-57c2-4dfe-99bb-7d08a610feff', 'IntegerAttribute', 'com.twinkle.framework.core.lang.IntegerAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('a9e8cd6b-805b-45ad-8111-64b60384dda3', 'LongAttribute', 'com.twinkle.framework.core.lang.LongAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('dac1967f-e842-4294-9cf1-dd7629c15798', 'FloatAttribute', 'com.twinkle.framework.core.lang.FloatAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('7974a119-c1e6-491e-a40a-e0c43c6f1e8a', 'DoubleAttribute', 'com.twinkle.framework.core.lang.DoubleAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('c0f60850-1c54-434f-a551-1ffa0bdf53c0', 'UUIDAttribute', 'com.twinkle.framework.core.lang.UUIDAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('68c44098-4339-453f-bbe7-b6599caeb517', 'TimeAttribute', 'com.twinkle.framework.core.lang.TimeAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('e0ce871e-0f63-4608-b55b-9456e173932b', 'RangeAttribute', 'com.twinkle.framework.core.lang.RangeAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('9a98a9b5-0510-45d6-b480-33a3145e3411', 'StringAttribute', 'com.twinkle.framework.core.lang.StringAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('4ca0ede2-fec7-4264-b042-739ba10a292d', 'UnicodeStringAttribute', 'com.twinkle.framework.core.lang.UnicodeStringAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('5c90afa3-cbec-47bd-bcaf-fd5815f7ad33', 'MutableStringAttribute', 'com.twinkle.framework.core.lang.MutableStringAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('ffaf9560-b408-425e-ac85-9bba48363e63', 'IPAddrAttribute', 'com.twinkle.framework.core.lang.IPAddrAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('dd5b8f93-ca44-4bfd-8783-518abea5de5d', 'IPv6AddrAttribute', 'com.twinkle.framework.core.lang.IPv6AddrAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('9d064875-d3cc-4706-9c3a-82a57ae2df8f', 'ListAttribute', 'com.twinkle.framework.core.lang.ListAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('6205777a-e711-4642-84b3-e998e5647ead', 'ObjectAttribute', 'com.twinkle.framework.core.lang.ObjectAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('a9abad1c-c15e-42e7-8a9e-7174222bdaeb', 'StructAttrAttribute', 'com.twinkle.framework.struct.lang.StructAttrAttribute' ,'1');
-INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('122517ce-0cc9-4254-bd8c-8c6b98615bf7', 'StructAttributeList', 'com.twinkle.framework.core.lang.StructAttributeList' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('c769ef9436bc48399d2fb29b825c5839', 'BinaryAttribute', 'com.twinkle.framework.core.lang.BinaryAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('0f2e571257c24dfe99bb7d08a610feff', 'IntegerAttribute', 'com.twinkle.framework.core.lang.IntegerAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('a9e8cd6b805b45ad811164b60384dda3', 'LongAttribute', 'com.twinkle.framework.core.lang.LongAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('dac1967fe84242949cf1dd7629c15798', 'FloatAttribute', 'com.twinkle.framework.core.lang.FloatAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('7974a119c1e6491ea40ae0c43c6f1e8a', 'DoubleAttribute', 'com.twinkle.framework.core.lang.DoubleAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('c0f608501c54434fa5511ffa0bdf53c0', 'UUIDAttribute', 'com.twinkle.framework.core.lang.UUIDAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('68c440984339453fbbe7b6599caeb517', 'TimeAttribute', 'com.twinkle.framework.core.lang.TimeAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('e0ce871e0f634608b55b9456e173932b', 'RangeAttribute', 'com.twinkle.framework.core.lang.RangeAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('9a98a9b5051045d6b48033a3145e3411', 'StringAttribute', 'com.twinkle.framework.core.lang.StringAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('4ca0ede2fec74264b042739ba10a292d', 'UnicodeStringAttribute', 'com.twinkle.framework.core.lang.UnicodeStringAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('5c90afa3cbec47bdbcaffd5815f7ad33', 'MutableStringAttribute', 'com.twinkle.framework.core.lang.MutableStringAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('ffaf9560b408425eac859bba48363e63', 'IPAddrAttribute', 'com.twinkle.framework.core.lang.IPAddrAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('dd5b8f93ca444bfd8783518abea5de5d', 'IPv6AddrAttribute', 'com.twinkle.framework.core.lang.IPv6AddrAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('9d064875d3cc47069c3a82a57ae2df8f', 'ListAttribute', 'com.twinkle.framework.core.lang.ListAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('6205777ae711464284b3e998e5647ead', 'ObjectAttribute', 'com.twinkle.framework.core.lang.ObjectAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('a9abad1cc15e42e78a9e7174222bdaeb', 'StructAttrAttribute', 'com.twinkle.framework.struct.lang.StructAttrAttribute' ,'1');
+INSERT INTO public.A_ATTRIBUTE_TYPE(ID, NAME, CLASS_NAME, STATUS) VALUES ('122517ce0cc94254bd8c8c6b98615bf7', 'StructAttributeList', 'com.twinkle.framework.core.lang.StructAttributeList' ,'1');
 
 
 -- Add attribute type - sql type map.  uuid_generate_v4()
 TRUNCATE TABLE public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP RESTART IDENTITY CASCADE;
 
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('744ed5fb-6a3f-4712-940d-569735290c32', '0f2e5712-57c2-4dfe-99bb-7d08a610feff', '-7','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('3758bb29-96c7-4cf8-844e-df4cc4058df7', '0f2e5712-57c2-4dfe-99bb-7d08a610feff', '16','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('06570cd9-db8a-41ff-a403-f554f4df59f2', '0f2e5712-57c2-4dfe-99bb-7d08a610feff', '5','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('97a711d7-e2a9-4204-9b9a-6772433c7b97', '0f2e5712-57c2-4dfe-99bb-7d08a610feff', '-6','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('527ae45e-28a5-46bb-b315-17b6d60e95b1', '0f2e5712-57c2-4dfe-99bb-7d08a610feff', '4','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('6fc5b83e-c016-4fc9-8ffc-35558e8adece', '68c44098-4339-453f-bbe7-b6599caeb517', '4','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('2a44fd0e-4632-4145-86bf-008748606189', '68c44098-4339-453f-bbe7-b6599caeb517', '91','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('8064b372-0f7d-452b-8369-deaaa2bdf5fa', '68c44098-4339-453f-bbe7-b6599caeb517', '92','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('4cae65f5-2c0b-4d98-ad3e-996f46b9ac50', '68c44098-4339-453f-bbe7-b6599caeb517', '93','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('691a0d12-be3a-4c3c-a29d-b583c2f776ae', '68c44098-4339-453f-bbe7-b6599caeb517', '2013','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('75f00f4b-417d-471f-9808-adb3bf687337', '68c44098-4339-453f-bbe7-b6599caeb517', '2014','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('da09d553-93bf-4277-abd1-8e0e7144be56', 'a9e8cd6b-805b-45ad-8111-64b60384dda3', '-5','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('8517f895-181c-4fa0-8275-ff4ba86fcb37', 'c769ef94-36bc-4839-9d2f-b29b825c5839', '-4','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('6f6ad960-8f45-49eb-86e2-b37d115af43a', 'c769ef94-36bc-4839-9d2f-b29b825c5839', '-2','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('e163c87e-5b51-4d95-918a-2cf057f5672f', 'c769ef94-36bc-4839-9d2f-b29b825c5839', '-3','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('3ab5001e-cc05-4c47-a9a1-ef065049ab5f', '9a98a9b5-0510-45d6-b480-33a3145e3411', '12','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('e9425fa8-5e5a-46c0-af1e-4c9e61309d92', '9a98a9b5-0510-45d6-b480-33a3145e3411', '-1','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('8825f093-a81f-498a-8bb2-27c17ce80815', 'ffaf9560-b408-425e-ac85-9bba48363e63', '12','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('1f301d13-7d3e-4869-a423-0be1cd3f7361', 'ffaf9560-b408-425e-ac85-9bba48363e63', '-1','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('6b3f2043-614f-484d-a818-01d51cb2f424', 'dac1967f-e842-4294-9cf1-dd7629c15798', '6','1');
-INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('fef784db-471a-40ce-b03d-df5ce6d949cc', '7974a119-c1e6-491e-a40a-e0c43c6f1e8a', '8','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('744ed5fb6a3f4712940d569735290c32', '0f2e571257c24dfe99bb7d08a610feff', '-7','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('3758bb2996c74cf8844edf4cc4058df7', '0f2e571257c24dfe99bb7d08a610feff', '16','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('06570cd9db8a41ffa403f554f4df59f2', '0f2e571257c24dfe99bb7d08a610feff', '5','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('97a711d7e2a942049b9a6772433c7b97', '0f2e571257c24dfe99bb7d08a610feff', '-6','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('527ae45e28a546bbb31517b6d60e95b1', '0f2e571257c24dfe99bb7d08a610feff', '4','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('6fc5b83ec0164fc98ffc35558e8adece', '68c440984339453fbbe7b6599caeb517', '4','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('2a44fd0e4632414586bf008748606189', '68c440984339453fbbe7b6599caeb517', '91','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('8064b3720f7d452b8369deaaa2bdf5fa', '68c440984339453fbbe7b6599caeb517', '92','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('4cae65f52c0b4d98ad3e996f46b9ac50', '68c440984339453fbbe7b6599caeb517', '93','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('691a0d12be3a4c3ca29db583c2f776ae', '68c440984339453fbbe7b6599caeb517', '2013','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('75f00f4b417d471f9808adb3bf687337', '68c440984339453fbbe7b6599caeb517', '2014','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('da09d55393bf4277abd18e0e7144be56', 'a9e8cd6b805b45ad811164b60384dda3', '-5','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('8517f895181c4fa08275ff4ba86fcb37', 'c769ef9436bc48399d2fb29b825c5839', '-4','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('6f6ad9608f4549eb86e2b37d115af43a', 'c769ef9436bc48399d2fb29b825c5839', '-2','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('e163c87e5b514d95918a2cf057f5672f', 'c769ef9436bc48399d2fb29b825c5839', '-3','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('3ab5001ecc054c47a9a1ef065049ab5f', '9a98a9b5051045d6b48033a3145e3411', '12','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('e9425fa85e5a46c0af1e4c9e61309d92', '9a98a9b5051045d6b48033a3145e3411', '-1','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('8825f093a81f498a8bb227c17ce80815', 'ffaf9560b408425eac859bba48363e63', '12','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('1f301d137d3e4869a4230be1cd3f7361', 'ffaf9560b408425eac859bba48363e63', '-1','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('6b3f2043614f484da81801d51cb2f424', 'dac1967fe84242949cf1dd7629c15798', '6','1');
+INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE, STATUS) VALUES ('fef784db471a40ceb03ddf5ce6d949cc', '7974a119c1e6491ea40ae0c43c6f1e8a', '8','1');
 
 -- ==================================================================
 -- *        Going to initialize the System Menu Records.            *
@@ -397,63 +397,63 @@ INSERT INTO public.A_ATTRIBUTE_TYPE_SQL_TYPE_MAP(ID, ATTRIBUTE_TYPE_ID, SQL_TYPE
 -- Add System Menu.  uuid_generate_v4()
 TRUNCATE TABLE public.S_MENU RESTART IDENTITY CASCADE;
 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('9420d480-d3e8-4c47-8cb2-a0e619c68bbc', 'DASHBOARD', '首页', null, '1', '/twinkle/console/dashboard', 'icon-dashboard', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('9420d480d3e84c478cb2a0e619c68bbc', 'DASHBOARD', '首页', null, '1', '/twinkle/console/dashboard', 'icon-dashboard', '1', '3');
 -- 
 -- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('7f5d90ae-ccba-4a40-87af-48347b3991a1', 'MY_PROJECT', '我的项目', null, '10', '', 'icon-project', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('481535c1-1e7e-4913-a32a-48d45fd741eb', 'PROJECT_LIST', '项目列表', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '11', '/twinkle/console/project/projectlist', 'icon-projectlist', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3887c84c-9e92-4050-a718-5725cdd2a882', 'PROJECT_ENV', '项目环境', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '12', '/twinkle/console/project/env', 'icon-projectenv', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('bff16749-df4b-44fe-9452-6f3952371cb7', 'PROJECT_SERVICE', '项目服务列表', '7f5d90ae-ccba-4a40-87af-48347b3991a1', '13', '/twinkle/console/project/architecture', 'icon-projectarch', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('7f5d90aeccba4a4087af48347b3991a1', 'MY_PROJECT', '我的项目', null, '10', '', 'icon-project', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('481535c11e7e4913a32a48d45fd741eb', 'PROJECT_LIST', '项目列表', '7f5d90aeccba4a4087af48347b3991a1', '11', '/twinkle/console/project/projectlist', 'icon-projectlist', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3887c84c9e924050a7185725cdd2a882', 'PROJECT_ENV', '项目环境', '7f5d90aeccba4a4087af48347b3991a1', '12', '/twinkle/console/project/env', 'icon-projectenv', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('bff16749df4b44fe94526f3952371cb7', 'PROJECT_SERVICE', '项目服务列表', '7f5d90aeccba4a4087af48347b3991a1', '13', '/twinkle/console/project/architecture', 'icon-projectarch', '1', '3');
 
 -- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('52d5de5b-11f1-40ae-bbe3-82fb720b9c99', 'MY_SERVICE', '我的服务', null, '30', '', 'icon-service', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('b04c87ca-d654-40ce-8491-942f5f10d82e', 'SERVICE_LIST', '服务列表', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '31', '/twinkle/console/service/servicelist', 'icon-servicelist', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('62748fd1-3d90-4914-9a69-87d9ddd2ce08', 'SERVICE_ENV', '服务环境', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '32', '/twinkle/console/service/env', 'icon-serviceenv', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('fcd6af44-935b-450a-a3e6-11774932a10b', 'SERVICE_SETTING', '服务设置', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '33', '/twinkle/console/service/settings', 'icon-servicesetting', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a41fd9e2-d3d6-4f83-89cf-6da508f29464', 'SERVICE_BUILD', '服务构建', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '34', '/twinkle/console/service/build', 'icon-servicebuild', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('8821f9b2-8f3e-4054-83f4-8cb2918233a4', 'SERVICE_TEST', '服务测试', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '35', '/twinkle/console/service/test', 'icon-servicetest', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('43348007-ed9f-4934-98fe-490ee75f2947', 'SERVICE_PUBLISH', '服务发布', '52d5de5b-11f1-40ae-bbe3-82fb720b9c99', '36', '/twinkle/console/service/publish', 'icon-servicepublish', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('52d5de5b11f140aebbe382fb720b9c99', 'MY_SERVICE', '我的服务', null, '30', '', 'icon-service', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('b04c87cad65440ce8491942f5f10d82e', 'SERVICE_LIST', '服务列表', '52d5de5b11f140aebbe382fb720b9c99', '31', '/twinkle/console/service/servicelist', 'icon-servicelist', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('62748fd13d9049149a6987d9ddd2ce08', 'SERVICE_ENV', '服务环境', '52d5de5b11f140aebbe382fb720b9c99', '32', '/twinkle/console/service/env', 'icon-serviceenv', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('fcd6af44935b450aa3e611774932a10b', 'SERVICE_SETTING', '服务设置', '52d5de5b11f140aebbe382fb720b9c99', '33', '/twinkle/console/service/settings', 'icon-servicesetting', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a41fd9e2d3d64f8389cf6da508f29464', 'SERVICE_BUILD', '服务构建', '52d5de5b11f140aebbe382fb720b9c99', '34', '/twinkle/console/service/build', 'icon-servicebuild', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('8821f9b28f3e405483f48cb2918233a4', 'SERVICE_TEST', '服务测试', '52d5de5b11f140aebbe382fb720b9c99', '35', '/twinkle/console/service/test', 'icon-servicetest', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('43348007ed9f493498fe490ee75f2947', 'SERVICE_PUBLISH', '服务发布', '52d5de5b11f140aebbe382fb720b9c99', '36', '/twinkle/console/service/publish', 'icon-servicepublish', '1', '3');
 
 -- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('4720566a-d7c1-44b6-9858-186d0764e5b3', 'MY_ENV', '我的环境', null, '50', '', 'icon-env', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('1bfef86a-b35b-409d-8dda-dbbe70dd73e9', 'ENV_HOST', '主机环境', '4720566a-d7c1-44b6-9858-186d0764e5b3', '51', '/twinkle/console/env/hostlist', 'icon-envhost', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('c2783e3a-f3bd-4330-bdab-eb809eec7d6d', 'ENV_KUBERNETES', 'Kubernetes环境', '4720566a-d7c1-44b6-9858-186d0764e5b3', '52', '/twinkle/console/env/kubernetes', 'icon-envk8s', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3b7e766d-d1d7-4d2e-ba5a-2d4a144a16f5', 'ENV_DATASOURCE', '数据源中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '53', '/twinkle/console/env/datasource', 'icon-envdatasource', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('02f3c50f-ef07-470e-b2fa-ce8abac6f404', 'ENV_CACHE', '缓存中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '54', '/twinkle/console/env/cache', 'icon-envcache', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('4ae7af00-9696-4972-95d5-056241659dcb', 'ENV_MQ', 'MQ中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '55', '/twinkle/console/env/mq', 'icon-envmq', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('9d9ebb71-8e77-468d-a6c0-1627639a8156', 'ENV_GIT', 'Git中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '56', '/twinkle/console/env/git', 'icon-envgit', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('03b7d04c-66c8-4686-a113-144aaa43a642', 'ENV_MAVEN', 'Maven中心', '4720566a-d7c1-44b6-9858-186d0764e5b3', '57', '/twinkle/console/env/maven', 'icon-envmaven', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('4720566ad7c144b69858186d0764e5b3', 'MY_ENV', '我的环境', null, '50', '', 'icon-env', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('1bfef86ab35b409d8ddadbbe70dd73e9', 'ENV_HOST', '主机环境', '4720566ad7c144b69858186d0764e5b3', '51', '/twinkle/console/env/hostlist', 'icon-envhost', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('c2783e3af3bd4330bdabeb809eec7d6d', 'ENV_KUBERNETES', 'Kubernetes环境', '4720566ad7c144b69858186d0764e5b3', '52', '/twinkle/console/env/kubernetes', 'icon-envk8s', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3b7e766dd1d74d2eba5a2d4a144a16f5', 'ENV_DATASOURCE', '数据源中心', '4720566ad7c144b69858186d0764e5b3', '53', '/twinkle/console/env/datasource', 'icon-envdatasource', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('02f3c50fef07470eb2face8abac6f404', 'ENV_CACHE', '缓存中心', '4720566ad7c144b69858186d0764e5b3', '54', '/twinkle/console/env/cache', 'icon-envcache', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('4ae7af009696497295d5056241659dcb', 'ENV_MQ', 'MQ中心', '4720566ad7c144b69858186d0764e5b3', '55', '/twinkle/console/env/mq', 'icon-envmq', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('9d9ebb718e77468da6c01627639a8156', 'ENV_GIT', 'Git中心', '4720566ad7c144b69858186d0764e5b3', '56', '/twinkle/console/env/git', 'icon-envgit', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('03b7d04c66c84686a113144aaa43a642', 'ENV_MAVEN', 'Maven中心', '4720566ad7c144b69858186d0764e5b3', '57', '/twinkle/console/env/maven', 'icon-envmaven', '1', '1');
 
 -- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3cda0396-eaf8-437c-932b-e90ae2d2f168', 'MY_ATTRIBUTE', '我的参数', null, '90', '', 'icon-attr', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('58373234-1fe6-49bc-8632-8e63e2c34a64', 'ATTR_PRIMITIVE', '基础参数', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '91', '/twinkle/console/attr/primitive', 'icon-attrprimitive', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('d81116bd-2f20-42b0-b67b-78f853a333ed', 'ATTR_STRUCT', '结构参数', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '92', '/twinkle/console/attr/struct', 'icon-attrstruct', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('f8810b18-1bcf-479d-b7f5-c39961e66866', 'ATTR_PRIMITIVE_TYPE', '基础参数类型', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '93', '/twinkle/console/attr/primitivetype', 'icon-attrprimitivetype', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3f4b286f-582e-4814-93f0-82ebf5e7c52a', 'ATTR_PRIMITIVE_TYPE_MGMT', '基础参数类型管理', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '94', '/twinkle/console/attr/primitivetypemgmt', 'icon-attrprimitivetypemgmt', '1', '0');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('401c18ce-955f-42f8-999f-e070dbff50de', 'ATTR_ATTR_TYPE_SQL_TYPE', 'SQL类型', '3cda0396-eaf8-437c-932b-e90ae2d2f168', '95', '/twinkle/console/attr/primitivesql', 'icon-primitivesql', '1', '0');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3cda0396eaf8437c932be90ae2d2f168', 'MY_ATTRIBUTE', '我的参数', null, '90', '', 'icon-attr', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('583732341fe649bc86328e63e2c34a64', 'ATTR_PRIMITIVE', '基础参数', '3cda0396eaf8437c932be90ae2d2f168', '91', '/twinkle/console/attr/primitive', 'icon-attrprimitive', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('d81116bd2f2042b0b67b78f853a333ed', 'ATTR_STRUCT', '结构参数', '3cda0396eaf8437c932be90ae2d2f168', '92', '/twinkle/console/attr/struct', 'icon-attrstruct', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('f8810b181bcf479db7f5c39961e66866', 'ATTR_PRIMITIVE_TYPE', '基础参数类型', '3cda0396eaf8437c932be90ae2d2f168', '93', '/twinkle/console/attr/primitivetype', 'icon-attrprimitivetype', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('3f4b286f582e481493f082ebf5e7c52a', 'ATTR_PRIMITIVE_TYPE_MGMT', '基础参数类型管理', '3cda0396eaf8437c932be90ae2d2f168', '94', '/twinkle/console/attr/primitivetypemgmt', 'icon-attrprimitivetypemgmt', '1', '0');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('401c18ce955f42f8999fe070dbff50de', 'ATTR_ATTR_TYPE_SQL_TYPE', 'SQL类型', '3cda0396eaf8437c932be90ae2d2f168', '95', '/twinkle/console/attr/primitivesql', 'icon-primitivesql', '1', '0');
 
 -- 
 -- Maven
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('09b40dd6-1988-4267-bcb7-142782b55bb1', 'MY_COMPONENT', '我的组件', null, '110', '', 'icon-composite', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('2b8cc166-c117-44ba-86be-a7835f0395a8', 'COM_COMPONENT_LIST', '组件列表', '09b40dd6-1988-4267-bcb7-142782b55bb1', '111', '/twinkle/console/component/componentlist', 'icon-componentlist', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('6a8bb931-7aea-4b0e-99f1-86e52871d372', 'COM_MANAGEMENT', '组件管理', '09b40dd6-1988-4267-bcb7-142782b55bb1', '112', '/twinkle/console/component/componentlist', 'icon-componentmgmt', '1', '0');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('190ae300-5b78-4469-9c80-47061278d2ce', 'COM_CUSTOMIZE', '自定义组件', '09b40dd6-1988-4267-bcb7-142782b55bb1', '113', '/twinkle/console/component/customize', 'icon-comcustomize', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('09b40dd619884267bcb7142782b55bb1', 'MY_COMPONENT', '我的组件', null, '110', '', 'icon-composite', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('2b8cc166c11744ba86bea7835f0395a8', 'COM_COMPONENT_LIST', '组件列表', '09b40dd619884267bcb7142782b55bb1', '111', '/twinkle/console/component/componentlist', 'icon-componentlist', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('6a8bb9317aea4b0e99f186e52871d372', 'COM_MANAGEMENT', '组件管理', '09b40dd619884267bcb7142782b55bb1', '112', '/twinkle/console/component/componentlist', 'icon-componentmgmt', '1', '0');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('190ae3005b7844699c8047061278d2ce', 'COM_CUSTOMIZE', '自定义组件', '09b40dd619884267bcb7142782b55bb1', '113', '/twinkle/console/component/customize', 'icon-comcustomize', '1', '3');
 
 -- UI
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('72f51e07-2e09-4617-bed2-09dcba6898e8', 'MY_METADATA', '元数据中心', null, '130', '', 'icon-metadata', '1', '1');
---INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('97affd10-d4f4-4854-8049-22911d267b1c', 'MD_LIST', '元数据列表', '72f51e07-2e09-4617-bed2-09dcba6898e8', '131', '/twinkle/console/metadata/list', 'icon-mdlist', '1', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('42fbbee0-4c6b-4cab-bc17-c75bb344f167', 'MD_MANAGEMENT', '元数据管理', '72f51e07-2e09-4617-bed2-09dcba6898e8', '132', '/twinkle/console/metadata/management', 'icon-mdmanagement', '0', '1');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('e96d2552-f73d-4963-9242-bedea10c9662', 'MG_TEMPLATE', '元数据模板', '72f51e07-2e09-4617-bed2-09dcba6898e8', '133', '/twinkle/console/metadata/template', 'icon-mdtemplate', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('72f51e072e094617bed209dcba6898e8', 'MY_METADATA', '元数据中心', null, '130', '', 'icon-metadata', '1', '1');
+--INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('97affd0-d44-484-809-22911d267b1c', 'MD_LIST', '元数据列表', '72f51e072e094617bed209dcba6898e8', '131', '/twinkle/console/metadata/list', 'icon-mdlist', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('42fbbee04c6b4cabbc17c75bb344f167', 'MD_MANAGEMENT', '元数据管理', '72f51e072e094617bed209dcba6898e8', '132', '/twinkle/console/metadata/management', 'icon-mdmanagement', '0', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('e96d2552f73d49639242bedea10c9662', 'MG_TEMPLATE', '元数据模板', '72f51e072e094617bed209dcba6898e8', '133', '/twinkle/console/metadata/template', 'icon-mdtemplate', '1', '1');
 
 -- 
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', 'MY_SYSTEMMANAGEMET', '系统管理', null, '150', '', 'icon-systemmgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('e380dd07-b2c0-4ac1-9ecf-7ebba60c2d02', 'SM_USER_MANAGEMENT', '用户管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '151', '/twinkle/console/systemmgmt/usermgmt', 'icon-smusermgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a360e4b3-ba3e-48b0-9d33-04f559efa240', 'SM_DEPT_MANAGEMENT', '部门管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '152', '/twinkle/console/systemmgmt/deptmgmt', 'icon-smdeptmgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('d76418e4-81f1-4216-94de-7f379fcdaa9c', 'SM_ROLE_MANAGEMENT', '角色管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '153', '/twinkle/console/systemmgmt/rolemgmt', 'icon-smrolemgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('7b3a2f94-ad67-4b96-a4cd-2ae9f2e042b3', 'SM_MENU_MANAGEMENT', '菜单管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '154', '/twinkle/console/systemmgmt/privilegemgmt', 'icon-smprivilegemgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('b4a8959f-4b66-403b-94f6-decc105bd285', 'SM_DICTIONARY', '数据字典', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '155', '/twinkle/console/systemmgmt/dictionarymgmt', 'icon-smdictionarymgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a9113c19-1d61-4f7b-8e56-df5f6eb47024', 'SM_RESULTCODE', '结果码', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '156', '/twinkle/console/systemmgmt/resultcodemgmt', 'icon-smresultcodemgmt', '1', '3');
-INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('facf6d15-fcbf-4ba5-a890-6f0ada217309', 'SM_TENANT_MANAGEMENT', '租户管理', '04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', '157', '/twinkle/console/systemmgmt/tenantmgmt', 'icon-tenantemgmt', '1', '1');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('04d07a027a4344b19cc0e001d8fc6d6c', 'MY_SYSTEMMANAGEMET', '系统管理', null, '150', '', 'icon-systemmgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('e380dd07b2c04ac19ecf7ebba60c2d02', 'SM_USER_MANAGEMENT', '用户管理', '04d07a027a4344b19cc0e001d8fc6d6c', '151', '/twinkle/console/systemmgmt/usermgmt', 'icon-smusermgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a360e4b3ba3e48b09d3304f559efa240', 'SM_DEPT_MANAGEMENT', '部门管理', '04d07a027a4344b19cc0e001d8fc6d6c', '152', '/twinkle/console/systemmgmt/deptmgmt', 'icon-smdeptmgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('d76418e481f1421694de7f379fcdaa9c', 'SM_ROLE_MANAGEMENT', '角色管理', '04d07a027a4344b19cc0e001d8fc6d6c', '153', '/twinkle/console/systemmgmt/rolemgmt', 'icon-smrolemgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('7b3a2f94ad674b96a4cd2ae9f2e042b3', 'SM_MENU_MANAGEMENT', '菜单管理', '04d07a027a4344b19cc0e001d8fc6d6c', '154', '/twinkle/console/systemmgmt/privilegemgmt', 'icon-smprivilegemgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('b4a8959f4b66403b94f6decc105bd285', 'SM_DICTIONARY', '数据字典', '04d07a027a4344b19cc0e001d8fc6d6c', '155', '/twinkle/console/systemmgmt/dictionarymgmt', 'icon-smdictionarymgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('a9113c191d614f7b8e56df5f6eb47024', 'SM_RESULTCODE', '结果码', '04d07a027a4344b19cc0e001d8fc6d6c', '156', '/twinkle/console/systemmgmt/resultcodemgmt', 'icon-smresultcodemgmt', '1', '3');
+INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, STATUS, TYPE) VALUES ('facf6d15fcbf4ba5a8906f0ada217309', 'SM_TENANT_MANAGEMENT', '租户管理', '04d07a027a4344b19cc0e001d8fc6d6c', '157', '/twinkle/console/systemmgmt/tenantmgmt', 'icon-tenantemgmt', '1', '1');
 
 -- ==================================================================
 -- *        Going to initialize the User Related Records.           *
@@ -461,63 +461,63 @@ INSERT INTO public.S_MENU(ID, CODE, NAME, PARENT_ID, SEQ_NO, ROUTING, I_PATH, ST
 
 -- Add Initial System Provider Tenant.  uuid_generate_v4()
 TRUNCATE TABLE public.U_TENANT RESTART IDENTITY CASCADE;
-INSERT INTO PUBLIC.U_TENANT(ID, CODE, NAME, LOGO, TYPE, STATUS) VALUES ('77844cad-b6e5-43b1-8ed3-1218bd5b5091', 'TWINKLE TECH', 'TWINKLE TECH', 'icon-twinkle', '0', '1');
+INSERT INTO PUBLIC.U_TENANT(ID, CODE, NAME, LOGO, TYPE, STATUS) VALUES ('77844cadb6e543b18ed31218bd5b5091', 'TWINKLE TECH', 'TWINKLE TECH', 'icon-twinkle', '0', '1');
 
 -- Add Initial System Administor Role.  uuid_generate_v4()
 TRUNCATE TABLE public.U_ROLE RESTART IDENTITY CASCADE;
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('bf6a4882-aa7f-4181-837e-acda967aae69', 'R_ROOT', '超级管理员', '0', '1');
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('6be21a76-2a7f-45ac-886d-cd14e3a6e577', 'R_ADMINISTRATOR', '系统管理员', '0', '1');
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('3b0b8bef-17a2-410d-bce1-20baadaa099a', 'R_ARCHITECT', '系统架构师', '0', '1');
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('2c8ad48f-ba6d-4c3b-8947-7a2dd7229271', 'R_PROJECT_MANAGER', '项目经理', '0', '1');
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('fb07604a-c2f9-41e3-9044-99a4e394bc1a', 'R_DEVELPTER', '研发', '0', '1');
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('818bae8b-087d-46b9-aa12-8e58ba004bd7', 'R_TESTER', '测试', '0', '1');
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('a321fa04-54f0-4940-a5a3-745c06855563', 'R_OPERATOR', '运维', '0', '1');
-INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('2a15389f-3226-4756-bb16-d7566dcb30c4', 'R_DEFAULT', '默认', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('bf6a4882aa7f4181837eacda967aae69', 'R_ROOT', '超级管理员', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('6be21a762a7f45ac886dcd14e3a6e577', 'R_ADMINISTRATOR', '系统管理员', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('3b0b8bef17a2410dbce120baadaa099a', 'R_ARCHITECT', '系统架构师', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('2c8ad48fba6d4c3b89477a2dd7229271', 'R_PROJECT_MANAGER', '项目经理', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('fb07604ac2f941e3904499a4e394bc1a', 'R_DEVELPTER', '研发', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('818bae8b087d46b9aa128e58ba004bd7', 'R_TESTER', '测试', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('a321fa0454f04940a5a3745c06855563', 'R_OPERATOR', '运维', '0', '1');
+INSERT INTO PUBLIC.U_ROLE(ID, CODE, NAME, TYPE, STATUS) VALUES ('2a15389f32264756bb16d7566dcb30c4', 'R_DEFAULT', '默认', '0', '1');
 
 -- Grant the menu privileges to the Adminitor role.  uuid_generate_v4()
 TRUNCATE TABLE public.U_ROLE_MENU_MAP RESTART IDENTITY CASCADE;
 -- Initialize ROOT Role's menu list.
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('9420d480-d3e8-4c47-8cb2-a0e619c68bbc', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('7f5d90ae-ccba-4a40-87af-48347b3991a1', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('481535c1-1e7e-4913-a32a-48d45fd741eb', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('3887c84c-9e92-4050-a718-5725cdd2a882', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('bff16749-df4b-44fe-9452-6f3952371cb7', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('52d5de5b-11f1-40ae-bbe3-82fb720b9c99', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('b04c87ca-d654-40ce-8491-942f5f10d82e', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('62748fd1-3d90-4914-9a69-87d9ddd2ce08', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('fcd6af44-935b-450a-a3e6-11774932a10b', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('a41fd9e2-d3d6-4f83-89cf-6da508f29464', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('8821f9b2-8f3e-4054-83f4-8cb2918233a4', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('43348007-ed9f-4934-98fe-490ee75f2947', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('4720566a-d7c1-44b6-9858-186d0764e5b3', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('1bfef86a-b35b-409d-8dda-dbbe70dd73e9', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('c2783e3a-f3bd-4330-bdab-eb809eec7d6d', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('3b7e766d-d1d7-4d2e-ba5a-2d4a144a16f5', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('02f3c50f-ef07-470e-b2fa-ce8abac6f404', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('4ae7af00-9696-4972-95d5-056241659dcb', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('9d9ebb71-8e77-468d-a6c0-1627639a8156', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('03b7d04c-66c8-4686-a113-144aaa43a642', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('3cda0396-eaf8-437c-932b-e90ae2d2f168', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('58373234-1fe6-49bc-8632-8e63e2c34a64', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('d81116bd-2f20-42b0-b67b-78f853a333ed', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('f8810b18-1bcf-479d-b7f5-c39961e66866', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('3f4b286f-582e-4814-93f0-82ebf5e7c52a', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('401c18ce-955f-42f8-999f-e070dbff50de', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('09b40dd6-1988-4267-bcb7-142782b55bb1', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('2b8cc166-c117-44ba-86be-a7835f0395a8', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('6a8bb931-7aea-4b0e-99f1-86e52871d372', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('190ae300-5b78-4469-9c80-47061278d2ce', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('72f51e07-2e09-4617-bed2-09dcba6898e8', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('97affd10-d4f4-4854-8049-22911d267b1c', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('42fbbee0-4c6b-4cab-bc17-c75bb344f167', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('e96d2552-f73d-4963-9242-bedea10c9662', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('04d07a02-7a43-44b1-9cc0-e001d8fc6d6c', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('e380dd07-b2c0-4ac1-9ecf-7ebba60c2d02', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('a360e4b3-ba3e-48b0-9d33-04f559efa240', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('d76418e4-81f1-4216-94de-7f379fcdaa9c', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('7b3a2f94-ad67-4b96-a4cd-2ae9f2e042b3', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('b4a8959f-4b66-403b-94f6-decc105bd285', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('a9113c19-1d61-4f7b-8e56-df5f6eb47024', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('facf6d15-fcbf-4ba5-a890-6f0ada217309', 'bf6a4882-aa7f-4181-837e-acda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('9420d480d3e84c478cb2a0e619c68bbc', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('7f5d90aeccba4a4087af48347b3991a1', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('481535c11e7e4913a32a48d45fd741eb', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('3887c84c9e924050a7185725cdd2a882', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('bff16749df4b44fe94526f3952371cb7', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('52d5de5b11f140aebbe382fb720b9c99', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('b04c87cad65440ce8491942f5f10d82e', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('62748fd13d9049149a6987d9ddd2ce08', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('fcd6af44935b450aa3e611774932a10b', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('a41fd9e2d3d64f8389cf6da508f29464', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('8821f9b28f3e405483f48cb2918233a4', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('43348007ed9f493498fe490ee75f2947', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('4720566ad7c144b69858186d0764e5b3', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('1bfef86ab35b409d8ddadbbe70dd73e9', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('c2783e3af3bd4330bdabeb809eec7d6d', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('3b7e766dd1d74d2eba5a2d4a144a16f5', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('02f3c50fef07470eb2face8abac6f404', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('4ae7af009696497295d5056241659dcb', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('9d9ebb718e77468da6c01627639a8156', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('03b7d04c66c84686a113144aaa43a642', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('3cda0396eaf8437c932be90ae2d2f168', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('583732341fe649bc86328e63e2c34a64', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('d81116bd2f2042b0b67b78f853a333ed', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('f8810b181bcf479db7f5c39961e66866', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('3f4b286f582e481493f082ebf5e7c52a', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('401c18ce955f42f8999fe070dbff50de', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('09b40dd619884267bcb7142782b55bb1', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('2b8cc166c11744ba86bea7835f0395a8', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('6a8bb9317aea4b0e99f186e52871d372', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('190ae3005b7844699c8047061278d2ce', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('72f51e072e094617bed209dcba6898e8', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('97affd10d4f44854804922911d267b1c', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('42fbbee04c6b4cabbc17c75bb344f167', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('e96d2552f73d49639242bedea10c9662', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('04d07a027a4344b19cc0e001d8fc6d6c', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('e380dd07b2c04ac19ecf7ebba60c2d02', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('a360e4b3ba3e48b09d3304f559efa240', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('d76418e481f1421694de7f379fcdaa9c', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('7b3a2f94ad674b96a4cd2ae9f2e042b3', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('b4a8959f4b66403b94f6decc105bd285', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('a9113c191d614f7b8e56df5f6eb47024', 'bf6a4882aa7f4181837eacda967aae69', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('facf6d15fcbf4ba5a8906f0ada217309', 'bf6a4882aa7f4181837eacda967aae69', '1');
 -- Initialize DEFAULT Role's menu list.
-INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('9420d480-d3e8-4c47-8cb2-a0e619c68bbc', '2a15389f-3226-4756-bb16-d7566dcb30c4', '1');
+INSERT INTO PUBLIC.U_ROLE_MENU_MAP(MENU_ID, ROLE_ID, STATUS) VALUES ('9420d480d3e84c478cb2a0e619c68bbc', '2a15389f32264756bb16d7566dcb30c4', '1');
